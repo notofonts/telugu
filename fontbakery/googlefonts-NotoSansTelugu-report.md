@@ -1,8 +1,8 @@
 ## Fontbakery report
 
-Fontbakery version: 0.8.10
+Fontbakery version: 0.8.11b0
 
-<details><summary><b>[4] Family checks</b></summary><div><details><summary>🔥 <b>FAIL:</b> Checking all files are in the same directory. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/single_directory">com.google.fonts/check/family/single_directory</a>)</summary><div>
+<details><summary><b>[5] Family checks</b></summary><div><details><summary>🔥 <b>FAIL:</b> Checking all files are in the same directory. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/single_directory">com.google.fonts/check/family/single_directory</a>)</summary><div>
 
 
 * 🔥 **FAIL** Not all fonts passed in the command line are in the same directory. This may lead to bad results as the tool will interpret all font files as belonging to a single font family. The detected directories are: ['fonts/NotoSansTelugu/googlefonts/ttf', 'fonts/NotoSansTelugu/googlefonts/variable-ttf'] [code: single-directory]
@@ -16,7 +16,7 @@ Noto Sans Telugu ExtraBold: 869
 Noto Sans Telugu ExtraLight: 869
 Noto Sans Telugu Light: 869
 Noto Sans Telugu Medium: 869
-Noto Sans Telugu Regular: 869
+Noto Sans Telugu: 869
 Noto Sans Telugu SemiBold: 869
 Noto Sans Telugu Thin: 869
 Noto Sans Telugu UI Black: 1069
@@ -25,7 +25,7 @@ Noto Sans Telugu UI ExtraBold: 1069
 Noto Sans Telugu UI ExtraLight: 1069
 Noto Sans Telugu UI Light: 1069
 Noto Sans Telugu UI Medium: 1069
-Noto Sans Telugu UI Regular: 1069
+Noto Sans Telugu UI: 1069
 Noto Sans Telugu UI SemiBold: 1069
 Noto Sans Telugu UI Thin: 1069 [code: sTypoAscender-mismatch]
 * 🔥 **FAIL** sTypoDescender is not the same across the family:
@@ -35,7 +35,7 @@ Noto Sans Telugu ExtraBold: -483
 Noto Sans Telugu ExtraLight: -483
 Noto Sans Telugu Light: -483
 Noto Sans Telugu Medium: -483
-Noto Sans Telugu Regular: -483
+Noto Sans Telugu: -483
 Noto Sans Telugu SemiBold: -483
 Noto Sans Telugu Thin: -483
 Noto Sans Telugu UI Black: -293
@@ -44,7 +44,7 @@ Noto Sans Telugu UI ExtraBold: -293
 Noto Sans Telugu UI ExtraLight: -293
 Noto Sans Telugu UI Light: -293
 Noto Sans Telugu UI Medium: -293
-Noto Sans Telugu UI Regular: -293
+Noto Sans Telugu UI: -293
 Noto Sans Telugu UI SemiBold: -293
 Noto Sans Telugu UI Thin: -293 [code: sTypoDescender-mismatch]
 * 🔥 **FAIL** usWinAscent is not the same across the family:
@@ -54,7 +54,7 @@ Noto Sans Telugu ExtraBold: 869
 Noto Sans Telugu ExtraLight: 869
 Noto Sans Telugu Light: 869
 Noto Sans Telugu Medium: 869
-Noto Sans Telugu Regular: 869
+Noto Sans Telugu: 869
 Noto Sans Telugu SemiBold: 869
 Noto Sans Telugu Thin: 869
 Noto Sans Telugu UI Black: 1069
@@ -63,7 +63,7 @@ Noto Sans Telugu UI ExtraBold: 1069
 Noto Sans Telugu UI ExtraLight: 1069
 Noto Sans Telugu UI Light: 1069
 Noto Sans Telugu UI Medium: 1069
-Noto Sans Telugu UI Regular: 1069
+Noto Sans Telugu UI: 1069
 Noto Sans Telugu UI SemiBold: 1069
 Noto Sans Telugu UI Thin: 1069 [code: usWinAscent-mismatch]
 * 🔥 **FAIL** usWinDescent is not the same across the family:
@@ -73,7 +73,7 @@ Noto Sans Telugu ExtraBold: 483
 Noto Sans Telugu ExtraLight: 483
 Noto Sans Telugu Light: 483
 Noto Sans Telugu Medium: 483
-Noto Sans Telugu Regular: 483
+Noto Sans Telugu: 483
 Noto Sans Telugu SemiBold: 483
 Noto Sans Telugu Thin: 483
 Noto Sans Telugu UI Black: 293
@@ -82,7 +82,7 @@ Noto Sans Telugu UI ExtraBold: 293
 Noto Sans Telugu UI ExtraLight: 293
 Noto Sans Telugu UI Light: 293
 Noto Sans Telugu UI Medium: 293
-Noto Sans Telugu UI Regular: 293
+Noto Sans Telugu UI: 293
 Noto Sans Telugu UI SemiBold: 293
 Noto Sans Telugu UI Thin: 293 [code: usWinDescent-mismatch]
 * 🔥 **FAIL** ascent is not the same across the family:
@@ -92,7 +92,7 @@ Noto Sans Telugu ExtraBold: 869
 Noto Sans Telugu ExtraLight: 869
 Noto Sans Telugu Light: 869
 Noto Sans Telugu Medium: 869
-Noto Sans Telugu Regular: 869
+Noto Sans Telugu: 869
 Noto Sans Telugu SemiBold: 869
 Noto Sans Telugu Thin: 869
 Noto Sans Telugu UI Black: 1069
@@ -101,7 +101,7 @@ Noto Sans Telugu UI ExtraBold: 1069
 Noto Sans Telugu UI ExtraLight: 1069
 Noto Sans Telugu UI Light: 1069
 Noto Sans Telugu UI Medium: 1069
-Noto Sans Telugu UI Regular: 1069
+Noto Sans Telugu UI: 1069
 Noto Sans Telugu UI SemiBold: 1069
 Noto Sans Telugu UI Thin: 1069 [code: ascent-mismatch]
 * 🔥 **FAIL** descent is not the same across the family:
@@ -111,7 +111,7 @@ Noto Sans Telugu ExtraBold: -483
 Noto Sans Telugu ExtraLight: -483
 Noto Sans Telugu Light: -483
 Noto Sans Telugu Medium: -483
-Noto Sans Telugu Regular: -483
+Noto Sans Telugu: -483
 Noto Sans Telugu SemiBold: -483
 Noto Sans Telugu Thin: -483
 Noto Sans Telugu UI Black: -293
@@ -120,7 +120,7 @@ Noto Sans Telugu UI ExtraBold: -293
 Noto Sans Telugu UI ExtraLight: -293
 Noto Sans Telugu UI Light: -293
 Noto Sans Telugu UI Medium: -293
-Noto Sans Telugu UI Regular: -293
+Noto Sans Telugu UI: -293
 Noto Sans Telugu UI SemiBold: -293
 Noto Sans Telugu UI Thin: -293 [code: descent-mismatch]
 </div></details><details><summary>🔥 <b>FAIL:</b> Fonts have consistent PANOSE proportion? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/os2.html#com.google.fonts/check/family/panose_proportion">com.google.fonts/check/family/panose_proportion</a>)</summary><div>
@@ -131,7 +131,15 @@ Noto Sans Telugu UI Thin: -293 [code: descent-mismatch]
 
 
 * 🔥 **FAIL** PANOSE family type is not the same across this family. In order to fix this, please make sure that the panose.bFamilyType value is the same in the OS/2 table of all of this family font files. [code: inconsistency]
-</div></details><br></div></details><details><summary><b>[12] NotoSansTelugu-Black.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
+</div></details><details><summary>🔥 <b>FAIL:</b> Check that OS/2.fsSelection bold & italic settings are unique for each NameID1 (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/os2.html#com.adobe.fonts/check/family/bold_italic_unique_for_nameid1">com.adobe.fonts/check/family/bold_italic_unique_for_nameid1</a>)</summary><div>
+
+
+* 🔥 **FAIL** Family 'Noto Sans Telugu' has 2 fonts (should be no more than 1) with the same OS/2.fsSelection bold & italic settings: Bold=False, Italic=False [code: unique-fsselection]
+</div></details><br></div></details><details><summary><b>[13] NotoSansTelugu-Black.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
+
+
+* 🔥 **FAIL** This is a Noto font but it lacks an ARTICLE.en_us.html file [code: missing-article]
+</div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
 * 🔥 **FAIL** OS/2.usWinAscent value should be equal or greater than 1105, but got 869 instead [code: ascent]
@@ -191,7 +199,7 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 	- bar 
 
-	- And 163 more.
+	- 163 more.
 
 Use -F or --full-lists to disable shortening of long lists.
  [code: unreachable-glyphs]
@@ -215,13 +223,13 @@ The following glyphs do not have the recommended number of contours:
 
 	- Glyph name: uni25CC	Contours detected: 8	Expected: 16 or 12 
 
-	- And Glyph name: uogonek	Contours detected: 2	Expected: 1
+	- Glyph name: uogonek	Contours detected: 2	Expected: 1
  [code: contour-count]
 </div></details><details><summary>⚠ <b>WARN:</b> Check glyphs in mark glyph class are non-spacing. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_spacing_marks">com.google.fonts/check/gdef_spacing_marks</a>)</summary><div>
 
 
 * ⚠ **WARN** The following spacing glyphs may be in the GDEF mark glyph class by mistake:
-	 aavowelsign2telu (unencoded), aavowelsigntelu (U+0C3E), basubscript1telu (unencoded), basubscripttelu (unencoded), bhasubscript1telu (unencoded), bhasubscripttelu (unencoded), casubscript1telu (unencoded), casubscripttelu (unencoded), chasubscript1telu (unencoded), chasubscripttelu (unencoded) and 68 more.
+	 aavowelsign2telu (unencoded), aavowelsigntelu (U+0C3E), basubscript1telu (unencoded), basubscripttelu (unencoded), bhasubscript1telu (unencoded), bhasubscripttelu (unencoded), casubscript1UItelu (unencoded), casubscript1telu (unencoded), casubscripttelu (unencoded), chasubscript1telu (unencoded) and 69 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-glyphs]
 </div></details><details><summary>⚠ <b>WARN:</b> Check mark characters are in GDEF mark glyph class. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_mark_chars">com.google.fonts/check/gdef_mark_chars</a>)</summary><div>
@@ -259,7 +267,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-
 
 	* copyright (U+00A9): X=148.5,Y=620.5 (should be at cap-height 620?) 
 
-	* And 87 more.
+	* 84 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-misalignments]
 </div></details><details><summary>⚠ <b>WARN:</b> Do outlines contain any jaggy segments? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_jaggy_segments">com.google.fonts/check/outline_jaggy_segments</a>)</summary><div>
@@ -287,10 +295,14 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 
 	* Wcircumflex (U+0174): B<<714.0,235.0>-<721.0,196.0>-<724.0,167.0>>/B<<724.0,167.0>-<727.0,192.0>-<734.0,229.0>> = 12.748914526401432 
 
-	* And 7 more.
+	* 7 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-jaggy-segments]
-</div></details><br></div></details><details><summary><b>[10] NotoSansTelugu-Bold.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[11] NotoSansTelugu-Bold.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
+
+
+* 🔥 **FAIL** This is a Noto font but it lacks an ARTICLE.en_us.html file [code: missing-article]
+</div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
 * 🔥 **FAIL** OS/2.usWinAscent value should be equal or greater than 1105, but got 869 instead [code: ascent]
@@ -343,7 +355,7 @@ Use -F or --full-lists to disable shortening of long lists.
 
 	- bar 
 
-	- And 163 more.
+	- 163 more.
 
 Use -F or --full-lists to disable shortening of long lists.
  [code: unreachable-glyphs]
@@ -367,13 +379,13 @@ The following glyphs do not have the recommended number of contours:
 
 	- Glyph name: uni25CC	Contours detected: 8	Expected: 16 or 12 
 
-	- And Glyph name: uogonek	Contours detected: 2	Expected: 1
+	- Glyph name: uogonek	Contours detected: 2	Expected: 1
  [code: contour-count]
 </div></details><details><summary>⚠ <b>WARN:</b> Check glyphs in mark glyph class are non-spacing. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_spacing_marks">com.google.fonts/check/gdef_spacing_marks</a>)</summary><div>
 
 
 * ⚠ **WARN** The following spacing glyphs may be in the GDEF mark glyph class by mistake:
-	 aavowelsign2telu (unencoded), aavowelsigntelu (U+0C3E), basubscript1telu (unencoded), basubscripttelu (unencoded), bhasubscript1telu (unencoded), bhasubscripttelu (unencoded), casubscript1telu (unencoded), casubscripttelu (unencoded), chasubscript1telu (unencoded), chasubscripttelu (unencoded) and 68 more.
+	 aavowelsign2telu (unencoded), aavowelsigntelu (U+0C3E), basubscript1telu (unencoded), basubscripttelu (unencoded), bhasubscript1telu (unencoded), bhasubscripttelu (unencoded), casubscript1UItelu (unencoded), casubscript1telu (unencoded), casubscripttelu (unencoded), chasubscript1telu (unencoded) and 69 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-glyphs]
 </div></details><details><summary>⚠ <b>WARN:</b> Check mark characters are in GDEF mark glyph class. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_mark_chars">com.google.fonts/check/gdef_mark_chars</a>)</summary><div>
@@ -411,10 +423,14 @@ Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-
 
 	* Wdieresis (U+1E84): B<<266.0,196.0>-<272.0,161.0>-<275.0,137.0>>/B<<275.0,137.0>-<278.0,162.0>-<284.0,196.5>> = 13.967789761532726 
 
-	* And 8 more.
+	* 8 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-jaggy-segments]
-</div></details><br></div></details><details><summary><b>[11] NotoSansTelugu-ExtraBold.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[12] NotoSansTelugu-ExtraBold.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
+
+
+* 🔥 **FAIL** This is a Noto font but it lacks an ARTICLE.en_us.html file [code: missing-article]
+</div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
 * 🔥 **FAIL** OS/2.usWinAscent value should be equal or greater than 1105, but got 869 instead [code: ascent]
@@ -474,7 +490,7 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 	- bar 
 
-	- And 163 more.
+	- 163 more.
 
 Use -F or --full-lists to disable shortening of long lists.
  [code: unreachable-glyphs]
@@ -498,13 +514,13 @@ The following glyphs do not have the recommended number of contours:
 
 	- Glyph name: uni25CC	Contours detected: 8	Expected: 16 or 12 
 
-	- And Glyph name: uogonek	Contours detected: 2	Expected: 1
+	- Glyph name: uogonek	Contours detected: 2	Expected: 1
  [code: contour-count]
 </div></details><details><summary>⚠ <b>WARN:</b> Check glyphs in mark glyph class are non-spacing. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_spacing_marks">com.google.fonts/check/gdef_spacing_marks</a>)</summary><div>
 
 
 * ⚠ **WARN** The following spacing glyphs may be in the GDEF mark glyph class by mistake:
-	 aavowelsign2telu (unencoded), aavowelsigntelu (U+0C3E), basubscript1telu (unencoded), basubscripttelu (unencoded), bhasubscript1telu (unencoded), bhasubscripttelu (unencoded), casubscript1telu (unencoded), casubscripttelu (unencoded), chasubscript1telu (unencoded), chasubscripttelu (unencoded) and 68 more.
+	 aavowelsign2telu (unencoded), aavowelsigntelu (U+0C3E), basubscript1telu (unencoded), basubscripttelu (unencoded), bhasubscript1telu (unencoded), bhasubscripttelu (unencoded), casubscript1UItelu (unencoded), casubscript1telu (unencoded), casubscripttelu (unencoded), chasubscript1telu (unencoded) and 69 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-glyphs]
 </div></details><details><summary>⚠ <b>WARN:</b> Check mark characters are in GDEF mark glyph class. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_mark_chars">com.google.fonts/check/gdef_mark_chars</a>)</summary><div>
@@ -542,10 +558,14 @@ Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-
 
 	* Wgrave (U+1E80): B<<283.5,211.5>-<290.0,175.0>-<293.0,151.0>>/B<<293.0,151.0>-<297.0,183.0>-<305.0,226.5>> = 14.25003269780357 
 
-	* And 4 more.
+	* 4 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-jaggy-segments]
-</div></details><br></div></details><details><summary><b>[12] NotoSansTelugu-ExtraLight.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[13] NotoSansTelugu-ExtraLight.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
+
+
+* 🔥 **FAIL** This is a Noto font but it lacks an ARTICLE.en_us.html file [code: missing-article]
+</div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
 * 🔥 **FAIL** OS/2.usWinAscent value should be equal or greater than 1105, but got 869 instead [code: ascent]
@@ -596,7 +616,7 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 	- bar 
 
-	- And 163 more.
+	- 163 more.
 
 Use -F or --full-lists to disable shortening of long lists.
  [code: unreachable-glyphs]
@@ -620,13 +640,13 @@ The following glyphs do not have the recommended number of contours:
 
 	- Glyph name: uni25CC	Contours detected: 8	Expected: 16 or 12 
 
-	- And Glyph name: uogonek	Contours detected: 2	Expected: 1
+	- Glyph name: uogonek	Contours detected: 2	Expected: 1
  [code: contour-count]
 </div></details><details><summary>⚠ <b>WARN:</b> Check glyphs in mark glyph class are non-spacing. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_spacing_marks">com.google.fonts/check/gdef_spacing_marks</a>)</summary><div>
 
 
 * ⚠ **WARN** The following spacing glyphs may be in the GDEF mark glyph class by mistake:
-	 aavowelsign2telu (unencoded), aavowelsigntelu (U+0C3E), basubscript1telu (unencoded), basubscripttelu (unencoded), bhasubscript1telu (unencoded), bhasubscripttelu (unencoded), casubscript1telu (unencoded), casubscripttelu (unencoded), chasubscript1telu (unencoded), chasubscripttelu (unencoded) and 68 more.
+	 aavowelsign2telu (unencoded), aavowelsigntelu (U+0C3E), basubscript1telu (unencoded), basubscripttelu (unencoded), bhasubscript1telu (unencoded), bhasubscripttelu (unencoded), casubscript1UItelu (unencoded), casubscript1telu (unencoded), casubscripttelu (unencoded), chasubscript1telu (unencoded) and 69 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-glyphs]
 </div></details><details><summary>⚠ <b>WARN:</b> Check mark characters are in GDEF mark glyph class. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_mark_chars">com.google.fonts/check/gdef_mark_chars</a>)</summary><div>
@@ -664,7 +684,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-
 
 	* m (U+006D) contains a short segment L<<126.0,438.0>--<129.0,438.0>> 
 
-	* And 79 more.
+	* 78 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-short-segments]
 </div></details><details><summary>⚠ <b>WARN:</b> Do outlines contain any jaggy segments? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_jaggy_segments">com.google.fonts/check/outline_jaggy_segments</a>)</summary><div>
@@ -673,7 +693,11 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-short-s
 * ⚠ **WARN** The following glyphs have jaggy segments:
 
 	* tatelu (U+0C24): B<<586.0,396.5>-<603.0,390.0>-<617.0,380.0>>/B<<617.0,380.0>-<594.0,405.0>-<558.5,422.0>> = 11.8482662384144 [code: found-jaggy-segments]
-</div></details><br></div></details><details><summary><b>[13] NotoSansTelugu-Light.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[14] NotoSansTelugu-Light.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
+
+
+* 🔥 **FAIL** This is a Noto font but it lacks an ARTICLE.en_us.html file [code: missing-article]
+</div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
 * 🔥 **FAIL** OS/2.usWinAscent value should be equal or greater than 1105, but got 869 instead [code: ascent]
@@ -733,7 +757,7 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 	- bar 
 
-	- And 163 more.
+	- 163 more.
 
 Use -F or --full-lists to disable shortening of long lists.
  [code: unreachable-glyphs]
@@ -757,13 +781,13 @@ The following glyphs do not have the recommended number of contours:
 
 	- Glyph name: uni25CC	Contours detected: 8	Expected: 16 or 12 
 
-	- And Glyph name: uogonek	Contours detected: 2	Expected: 1
+	- Glyph name: uogonek	Contours detected: 2	Expected: 1
  [code: contour-count]
 </div></details><details><summary>⚠ <b>WARN:</b> Check glyphs in mark glyph class are non-spacing. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_spacing_marks">com.google.fonts/check/gdef_spacing_marks</a>)</summary><div>
 
 
 * ⚠ **WARN** The following spacing glyphs may be in the GDEF mark glyph class by mistake:
-	 aavowelsign2telu (unencoded), aavowelsigntelu (U+0C3E), basubscript1telu (unencoded), basubscripttelu (unencoded), bhasubscript1telu (unencoded), bhasubscripttelu (unencoded), casubscript1telu (unencoded), casubscripttelu (unencoded), chasubscript1telu (unencoded), chasubscripttelu (unencoded) and 68 more.
+	 aavowelsign2telu (unencoded), aavowelsigntelu (U+0C3E), basubscript1telu (unencoded), basubscripttelu (unencoded), bhasubscript1telu (unencoded), bhasubscripttelu (unencoded), casubscript1UItelu (unencoded), casubscript1telu (unencoded), casubscripttelu (unencoded), chasubscript1telu (unencoded) and 69 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-glyphs]
 </div></details><details><summary>⚠ <b>WARN:</b> Check mark characters are in GDEF mark glyph class. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_mark_chars">com.google.fonts/check/gdef_mark_chars</a>)</summary><div>
@@ -801,7 +825,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-
 
 	* Q (U+0051): X=478.0,Y=2.0 (should be at baseline 0?) 
 
-	* And 71 more.
+	* 71 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-misalignments]
 </div></details><details><summary>⚠ <b>WARN:</b> Do any segments have colinear vectors? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_colinear_vectors">com.google.fonts/check/outline_colinear_vectors</a>)</summary><div>
@@ -811,14 +835,18 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 
 	* aatelu (U+0C06): L<<92.0,279.0>--<92.0,278.0>> -> L<<92.0,278.0>--<92.0,270.0>> 
 
-	* And atelu (U+0C05): L<<92.0,279.0>--<92.0,278.0>> -> L<<92.0,278.0>--<92.0,270.0>> [code: found-colinear-vectors]
+	* atelu (U+0C05): L<<92.0,279.0>--<92.0,278.0>> -> L<<92.0,278.0>--<92.0,270.0>> [code: found-colinear-vectors]
 </div></details><details><summary>⚠ <b>WARN:</b> Do outlines contain any jaggy segments? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_jaggy_segments">com.google.fonts/check/outline_jaggy_segments</a>)</summary><div>
 
 
 * ⚠ **WARN** The following glyphs have jaggy segments:
 
 	* tatelu (U+0C24): B<<576.0,403.0>-<587.0,400.0>-<598.0,395.0>>/B<<598.0,395.0>-<564.0,419.0>-<512.5,432.0>> = 10.773638187776136 [code: found-jaggy-segments]
-</div></details><br></div></details><details><summary><b>[11] NotoSansTelugu-Medium.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[12] NotoSansTelugu-Medium.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
+
+
+* 🔥 **FAIL** This is a Noto font but it lacks an ARTICLE.en_us.html file [code: missing-article]
+</div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
 * 🔥 **FAIL** OS/2.usWinAscent value should be equal or greater than 1105, but got 869 instead [code: ascent]
@@ -878,7 +906,7 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 	- bar 
 
-	- And 163 more.
+	- 163 more.
 
 Use -F or --full-lists to disable shortening of long lists.
  [code: unreachable-glyphs]
@@ -902,13 +930,13 @@ The following glyphs do not have the recommended number of contours:
 
 	- Glyph name: uni25CC	Contours detected: 8	Expected: 16 or 12 
 
-	- And Glyph name: uogonek	Contours detected: 2	Expected: 1
+	- Glyph name: uogonek	Contours detected: 2	Expected: 1
  [code: contour-count]
 </div></details><details><summary>⚠ <b>WARN:</b> Check glyphs in mark glyph class are non-spacing. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_spacing_marks">com.google.fonts/check/gdef_spacing_marks</a>)</summary><div>
 
 
 * ⚠ **WARN** The following spacing glyphs may be in the GDEF mark glyph class by mistake:
-	 aavowelsign2telu (unencoded), aavowelsigntelu (U+0C3E), basubscript1telu (unencoded), basubscripttelu (unencoded), bhasubscript1telu (unencoded), bhasubscripttelu (unencoded), casubscript1telu (unencoded), casubscripttelu (unencoded), chasubscript1telu (unencoded), chasubscripttelu (unencoded) and 68 more.
+	 aavowelsign2telu (unencoded), aavowelsigntelu (U+0C3E), basubscript1telu (unencoded), basubscripttelu (unencoded), bhasubscript1telu (unencoded), bhasubscripttelu (unencoded), casubscript1UItelu (unencoded), casubscript1telu (unencoded), casubscripttelu (unencoded), chasubscript1telu (unencoded) and 69 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-glyphs]
 </div></details><details><summary>⚠ <b>WARN:</b> Check mark characters are in GDEF mark glyph class. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_mark_chars">com.google.fonts/check/gdef_mark_chars</a>)</summary><div>
@@ -927,7 +955,11 @@ Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-
 * ⚠ **WARN** The following glyphs have jaggy segments:
 
 	* natelu (U+0C28): L<<247.0,416.0>--<247.0,416.0>>/B<<247.0,416.0>-<213.0,417.0>-<184.0,429.5>> = 1.68468431789628 [code: found-jaggy-segments]
-</div></details><br></div></details><details><summary><b>[12] NotoSansTelugu-Regular.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[13] NotoSansTelugu-Regular.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
+
+
+* 🔥 **FAIL** This is a Noto font but it lacks an ARTICLE.en_us.html file [code: missing-article]
+</div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
 * 🔥 **FAIL** OS/2.usWinAscent value should be equal or greater than 1105, but got 869 instead [code: ascent]
@@ -2524,7 +2556,7 @@ Use -F or --full-lists to disable shortening of long lists.
 
 	- bar 
 
-	- And 163 more.
+	- 163 more.
 
 Use -F or --full-lists to disable shortening of long lists.
  [code: unreachable-glyphs]
@@ -2548,13 +2580,13 @@ The following glyphs do not have the recommended number of contours:
 
 	- Glyph name: uni25CC	Contours detected: 8	Expected: 16 or 12 
 
-	- And Glyph name: uogonek	Contours detected: 2	Expected: 1
+	- Glyph name: uogonek	Contours detected: 2	Expected: 1
  [code: contour-count]
 </div></details><details><summary>⚠ <b>WARN:</b> Check glyphs in mark glyph class are non-spacing. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_spacing_marks">com.google.fonts/check/gdef_spacing_marks</a>)</summary><div>
 
 
 * ⚠ **WARN** The following spacing glyphs may be in the GDEF mark glyph class by mistake:
-	 aavowelsign2telu (unencoded), aavowelsigntelu (U+0C3E), basubscript1telu (unencoded), basubscripttelu (unencoded), bhasubscript1telu (unencoded), bhasubscripttelu (unencoded), casubscript1telu (unencoded), casubscripttelu (unencoded), chasubscript1telu (unencoded), chasubscripttelu (unencoded) and 68 more.
+	 aavowelsign2telu (unencoded), aavowelsigntelu (U+0C3E), basubscript1telu (unencoded), basubscripttelu (unencoded), bhasubscript1telu (unencoded), bhasubscripttelu (unencoded), casubscript1UItelu (unencoded), casubscript1telu (unencoded), casubscripttelu (unencoded), chasubscript1telu (unencoded) and 69 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-glyphs]
 </div></details><details><summary>⚠ <b>WARN:</b> Check mark characters are in GDEF mark glyph class. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_mark_chars">com.google.fonts/check/gdef_mark_chars</a>)</summary><div>
@@ -2574,14 +2606,18 @@ Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-
 
 	* nnatelu (U+0C23): L<<708.0,221.0>--<708.0,226.0>> -> L<<708.0,226.0>--<708.0,239.0>> 
 
-	* And uni0C7F (U+0C7F): L<<128.0,259.0>--<128.0,256.0>> -> L<<128.0,256.0>--<128.0,250.0>> [code: found-colinear-vectors]
+	* uni0C7F (U+0C7F): L<<128.0,259.0>--<128.0,256.0>> -> L<<128.0,256.0>--<128.0,250.0>> [code: found-colinear-vectors]
 </div></details><details><summary>⚠ <b>WARN:</b> Do outlines contain any jaggy segments? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_jaggy_segments">com.google.fonts/check/outline_jaggy_segments</a>)</summary><div>
 
 
 * ⚠ **WARN** The following glyphs have jaggy segments:
 
 	* tatelu (U+0C24): B<<561.0,409.0>-<565.0,409.0>-<571.0,408.0>>/B<<571.0,408.0>-<541.0,417.0>-<504.0,422.0>> = 7.236922025967975 [code: found-jaggy-segments]
-</div></details><br></div></details><details><summary><b>[12] NotoSansTelugu-SemiBold.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[13] NotoSansTelugu-SemiBold.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
+
+
+* 🔥 **FAIL** This is a Noto font but it lacks an ARTICLE.en_us.html file [code: missing-article]
+</div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
 * 🔥 **FAIL** OS/2.usWinAscent value should be equal or greater than 1105, but got 869 instead [code: ascent]
@@ -2641,7 +2677,7 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 	- bar 
 
-	- And 163 more.
+	- 163 more.
 
 Use -F or --full-lists to disable shortening of long lists.
  [code: unreachable-glyphs]
@@ -2665,13 +2701,13 @@ The following glyphs do not have the recommended number of contours:
 
 	- Glyph name: uni25CC	Contours detected: 8	Expected: 16 or 12 
 
-	- And Glyph name: uogonek	Contours detected: 2	Expected: 1
+	- Glyph name: uogonek	Contours detected: 2	Expected: 1
  [code: contour-count]
 </div></details><details><summary>⚠ <b>WARN:</b> Check glyphs in mark glyph class are non-spacing. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_spacing_marks">com.google.fonts/check/gdef_spacing_marks</a>)</summary><div>
 
 
 * ⚠ **WARN** The following spacing glyphs may be in the GDEF mark glyph class by mistake:
-	 aavowelsign2telu (unencoded), aavowelsigntelu (U+0C3E), basubscript1telu (unencoded), basubscripttelu (unencoded), bhasubscript1telu (unencoded), bhasubscripttelu (unencoded), casubscript1telu (unencoded), casubscripttelu (unencoded), chasubscript1telu (unencoded), chasubscripttelu (unencoded) and 68 more.
+	 aavowelsign2telu (unencoded), aavowelsigntelu (U+0C3E), basubscript1telu (unencoded), basubscripttelu (unencoded), bhasubscript1telu (unencoded), bhasubscripttelu (unencoded), casubscript1UItelu (unencoded), casubscript1telu (unencoded), casubscripttelu (unencoded), chasubscript1telu (unencoded) and 69 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-glyphs]
 </div></details><details><summary>⚠ <b>WARN:</b> Check mark characters are in GDEF mark glyph class. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_mark_chars">com.google.fonts/check/gdef_mark_chars</a>)</summary><div>
@@ -2691,7 +2727,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-
 
 	* lllatelu (U+0C34): L<<149.0,244.0>--<149.0,243.0>> -> L<<149.0,243.0>--<149.0,231.0>> 
 
-	* And ttatelu (U+0C1F): L<<149.0,244.0>--<149.0,243.0>> -> L<<149.0,243.0>--<149.0,231.0>> [code: found-colinear-vectors]
+	* ttatelu (U+0C1F): L<<149.0,244.0>--<149.0,243.0>> -> L<<149.0,243.0>--<149.0,231.0>> [code: found-colinear-vectors]
 </div></details><details><summary>⚠ <b>WARN:</b> Do outlines contain any jaggy segments? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_jaggy_segments">com.google.fonts/check/outline_jaggy_segments</a>)</summary><div>
 
 
@@ -2717,8 +2753,12 @@ Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-
 
 	* Wgrave (U+1E80): B<<678.0,182.0>-<684.0,150.0>-<687.0,126.0>>/B<<687.0,126.0>-<690.0,151.0>-<695.5,183.0>> = 13.967789761532726 
 
-	* And natelu (U+0C28): L<<257.0,407.0>--<257.0,407.0>>/B<<257.0,407.0>-<198.0,408.0>-<157.0,440.5>> = 0.9710219310788218 [code: found-jaggy-segments]
-</div></details><br></div></details><details><summary><b>[11] NotoSansTelugu-Thin.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
+	* natelu (U+0C28): L<<257.0,407.0>--<257.0,407.0>>/B<<257.0,407.0>-<198.0,408.0>-<157.0,440.5>> = 0.9710219310788218 [code: found-jaggy-segments]
+</div></details><br></div></details><details><summary><b>[12] NotoSansTelugu-Thin.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
+
+
+* 🔥 **FAIL** This is a Noto font but it lacks an ARTICLE.en_us.html file [code: missing-article]
+</div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
 * 🔥 **FAIL** OS/2.usWinAscent value should be equal or greater than 1105, but got 869 instead [code: ascent]
@@ -2762,7 +2802,7 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 	- bar 
 
-	- And 163 more.
+	- 163 more.
 
 Use -F or --full-lists to disable shortening of long lists.
  [code: unreachable-glyphs]
@@ -2786,13 +2826,13 @@ The following glyphs do not have the recommended number of contours:
 
 	- Glyph name: uni25CC	Contours detected: 8	Expected: 16 or 12 
 
-	- And Glyph name: uogonek	Contours detected: 2	Expected: 1
+	- Glyph name: uogonek	Contours detected: 2	Expected: 1
  [code: contour-count]
 </div></details><details><summary>⚠ <b>WARN:</b> Check glyphs in mark glyph class are non-spacing. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_spacing_marks">com.google.fonts/check/gdef_spacing_marks</a>)</summary><div>
 
 
 * ⚠ **WARN** The following spacing glyphs may be in the GDEF mark glyph class by mistake:
-	 aavowelsign2telu (unencoded), aavowelsigntelu (U+0C3E), basubscript1telu (unencoded), basubscripttelu (unencoded), bhasubscript1telu (unencoded), bhasubscripttelu (unencoded), casubscript1telu (unencoded), casubscripttelu (unencoded), chasubscript1telu (unencoded), chasubscripttelu (unencoded) and 68 more.
+	 aavowelsign2telu (unencoded), aavowelsigntelu (U+0C3E), basubscript1telu (unencoded), basubscripttelu (unencoded), bhasubscript1telu (unencoded), bhasubscripttelu (unencoded), casubscript1UItelu (unencoded), casubscript1telu (unencoded), casubscripttelu (unencoded), chasubscript1telu (unencoded) and 69 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-glyphs]
 </div></details><details><summary>⚠ <b>WARN:</b> Check mark characters are in GDEF mark glyph class. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_mark_chars">com.google.fonts/check/gdef_mark_chars</a>)</summary><div>
@@ -2812,7 +2852,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-
 
 	* llatelu (U+0C33): B<<200.5,143.0>-<225.0,166.0>-<267.0,174.0>>/B<<267.0,174.0>-<141.0,180.0>-<86.0,219.5>> = 13.510608861468855 
 
-	* And tatelu (U+0C24): B<<592.5,392.5>-<613.0,383.0>-<629.0,368.0>>/B<<629.0,368.0>-<607.0,400.0>-<568.5,421.0>> = 12.33908727832621 [code: found-jaggy-segments]
+	* tatelu (U+0C24): B<<592.5,392.5>-<613.0,383.0>-<629.0,368.0>>/B<<629.0,368.0>-<607.0,400.0>-<568.5,421.0>> = 12.33908727832621 [code: found-jaggy-segments]
 </div></details><details><summary>⚠ <b>WARN:</b> Do outlines contain any semi-vertical or semi-horizontal lines? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_semi_vertical">com.google.fonts/check/outline_semi_vertical</a>)</summary><div>
 
 
@@ -2824,8 +2864,12 @@ Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-
 
 	* exclamdown (U+00A1): L<<122.0,354.0>--<124.0,-186.0>> 
 
-	* And exclamdown (U+00A1): L<<96.0,-186.0>--<98.0,354.0>> [code: found-semi-vertical]
-</div></details><br></div></details><details><summary><b>[11] NotoSansTeluguUI-Black.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
+	* exclamdown (U+00A1): L<<96.0,-186.0>--<98.0,354.0>> [code: found-semi-vertical]
+</div></details><br></div></details><details><summary><b>[12] NotoSansTeluguUI-Black.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
+
+
+* 🔥 **FAIL** This is a Noto font but it lacks an ARTICLE.en_us.html file [code: missing-article]
+</div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
 * 🔥 **FAIL** OS/2.usWinAscent value should be equal or greater than 1105, but got 1069 instead [code: ascent]
@@ -2870,7 +2914,7 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 	- bar 
 
-	- And 163 more.
+	- 163 more.
 
 Use -F or --full-lists to disable shortening of long lists.
  [code: unreachable-glyphs]
@@ -2894,13 +2938,13 @@ The following glyphs do not have the recommended number of contours:
 
 	- Glyph name: uni25CC	Contours detected: 8	Expected: 16 or 12 
 
-	- And Glyph name: uogonek	Contours detected: 2	Expected: 1
+	- Glyph name: uogonek	Contours detected: 2	Expected: 1
  [code: contour-count]
 </div></details><details><summary>⚠ <b>WARN:</b> Check glyphs in mark glyph class are non-spacing. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_spacing_marks">com.google.fonts/check/gdef_spacing_marks</a>)</summary><div>
 
 
 * ⚠ **WARN** The following spacing glyphs may be in the GDEF mark glyph class by mistake:
-	 aavowelsign2telu (unencoded), aavowelsigntelu (U+0C3E), basubscript1telu (unencoded), basubscripttelu (unencoded), bhasubscript1telu (unencoded), bhasubscripttelu (unencoded), casubscript1telu (unencoded), casubscripttelu (unencoded), chasubscript1telu (unencoded), chasubscripttelu (unencoded) and 68 more.
+	 aavowelsign2telu (unencoded), aavowelsigntelu (U+0C3E), basubscript1telu (unencoded), basubscripttelu (unencoded), bhasubscript1telu (unencoded), bhasubscripttelu (unencoded), casubscript1UItelu (unencoded), casubscript1telu (unencoded), casubscripttelu (unencoded), chasubscript1telu (unencoded) and 69 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-glyphs]
 </div></details><details><summary>⚠ <b>WARN:</b> Check mark characters are in GDEF mark glyph class. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_mark_chars">com.google.fonts/check/gdef_mark_chars</a>)</summary><div>
@@ -2938,7 +2982,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-
 
 	* m (U+006D): X=678.0,Y=506.0 (should be at x-height 508?) 
 
-	* And 51 more.
+	* 51 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-misalignments]
 </div></details><details><summary>⚠ <b>WARN:</b> Do outlines contain any jaggy segments? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_jaggy_segments">com.google.fonts/check/outline_jaggy_segments</a>)</summary><div>
@@ -2966,10 +3010,14 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 
 	* Wcircumflex (U+0174): B<<714.0,328.0>-<721.0,289.0>-<724.0,260.0>>/B<<724.0,260.0>-<727.0,285.0>-<734.0,322.0>> = 12.748914526401432 
 
-	* And 9 more.
+	* 9 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-jaggy-segments]
-</div></details><br></div></details><details><summary><b>[10] NotoSansTeluguUI-Bold.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[11] NotoSansTeluguUI-Bold.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
+
+
+* 🔥 **FAIL** This is a Noto font but it lacks an ARTICLE.en_us.html file [code: missing-article]
+</div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
 * 🔥 **FAIL** OS/2.usWinAscent value should be equal or greater than 1105, but got 1069 instead [code: ascent]
@@ -3007,7 +3055,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-jaggy-s
 
 	- bar 
 
-	- And 163 more.
+	- 163 more.
 
 Use -F or --full-lists to disable shortening of long lists.
  [code: unreachable-glyphs]
@@ -3031,13 +3079,13 @@ The following glyphs do not have the recommended number of contours:
 
 	- Glyph name: uni25CC	Contours detected: 8	Expected: 16 or 12 
 
-	- And Glyph name: uogonek	Contours detected: 2	Expected: 1
+	- Glyph name: uogonek	Contours detected: 2	Expected: 1
  [code: contour-count]
 </div></details><details><summary>⚠ <b>WARN:</b> Check glyphs in mark glyph class are non-spacing. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_spacing_marks">com.google.fonts/check/gdef_spacing_marks</a>)</summary><div>
 
 
 * ⚠ **WARN** The following spacing glyphs may be in the GDEF mark glyph class by mistake:
-	 aavowelsign2telu (unencoded), aavowelsigntelu (U+0C3E), basubscript1telu (unencoded), basubscripttelu (unencoded), bhasubscript1telu (unencoded), bhasubscripttelu (unencoded), casubscript1telu (unencoded), casubscripttelu (unencoded), chasubscript1telu (unencoded), chasubscripttelu (unencoded) and 68 more.
+	 aavowelsign2telu (unencoded), aavowelsigntelu (U+0C3E), basubscript1telu (unencoded), basubscripttelu (unencoded), bhasubscript1telu (unencoded), bhasubscripttelu (unencoded), casubscript1UItelu (unencoded), casubscript1telu (unencoded), casubscripttelu (unencoded), chasubscript1telu (unencoded) and 69 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-glyphs]
 </div></details><details><summary>⚠ <b>WARN:</b> Check mark characters are in GDEF mark glyph class. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_mark_chars">com.google.fonts/check/gdef_mark_chars</a>)</summary><div>
@@ -3075,7 +3123,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-
 
 	* n (U+006E): X=412.0,Y=500.5 (should be at x-height 500?) 
 
-	* And 56 more.
+	* 56 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-misalignments]
 </div></details><details><summary>⚠ <b>WARN:</b> Do outlines contain any jaggy segments? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_jaggy_segments">com.google.fonts/check/outline_jaggy_segments</a>)</summary><div>
@@ -3103,10 +3151,14 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 
 	* Wdieresis (U+1E84): B<<266.0,289.0>-<272.0,254.0>-<275.0,230.0>>/B<<275.0,230.0>-<278.0,255.0>-<284.0,289.5>> = 13.967789761532726 
 
-	* And 10 more.
+	* 10 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-jaggy-segments]
-</div></details><br></div></details><details><summary><b>[11] NotoSansTeluguUI-ExtraBold.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[12] NotoSansTeluguUI-ExtraBold.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
+
+
+* 🔥 **FAIL** This is a Noto font but it lacks an ARTICLE.en_us.html file [code: missing-article]
+</div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
 * 🔥 **FAIL** OS/2.usWinAscent value should be equal or greater than 1105, but got 1069 instead [code: ascent]
@@ -3151,7 +3203,7 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 	- bar 
 
-	- And 163 more.
+	- 163 more.
 
 Use -F or --full-lists to disable shortening of long lists.
  [code: unreachable-glyphs]
@@ -3175,13 +3227,13 @@ The following glyphs do not have the recommended number of contours:
 
 	- Glyph name: uni25CC	Contours detected: 8	Expected: 16 or 12 
 
-	- And Glyph name: uogonek	Contours detected: 2	Expected: 1
+	- Glyph name: uogonek	Contours detected: 2	Expected: 1
  [code: contour-count]
 </div></details><details><summary>⚠ <b>WARN:</b> Check glyphs in mark glyph class are non-spacing. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_spacing_marks">com.google.fonts/check/gdef_spacing_marks</a>)</summary><div>
 
 
 * ⚠ **WARN** The following spacing glyphs may be in the GDEF mark glyph class by mistake:
-	 aavowelsign2telu (unencoded), aavowelsigntelu (U+0C3E), basubscript1telu (unencoded), basubscripttelu (unencoded), bhasubscript1telu (unencoded), bhasubscripttelu (unencoded), casubscript1telu (unencoded), casubscripttelu (unencoded), chasubscript1telu (unencoded), chasubscripttelu (unencoded) and 68 more.
+	 aavowelsign2telu (unencoded), aavowelsigntelu (U+0C3E), basubscript1telu (unencoded), basubscripttelu (unencoded), bhasubscript1telu (unencoded), bhasubscripttelu (unencoded), casubscript1UItelu (unencoded), casubscript1telu (unencoded), casubscripttelu (unencoded), chasubscript1telu (unencoded) and 69 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-glyphs]
 </div></details><details><summary>⚠ <b>WARN:</b> Check mark characters are in GDEF mark glyph class. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_mark_chars">com.google.fonts/check/gdef_mark_chars</a>)</summary><div>
@@ -3219,7 +3271,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-
 
 	* o (U+006F): X=453.5,Y=619.0 (should be at cap-height 620?) 
 
-	* And 84 more.
+	* 84 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-misalignments]
 </div></details><details><summary>⚠ <b>WARN:</b> Do outlines contain any jaggy segments? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_jaggy_segments">com.google.fonts/check/outline_jaggy_segments</a>)</summary><div>
@@ -3247,10 +3299,14 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 
 	* Wgrave (U+1E80): B<<283.5,304.5>-<290.0,268.0>-<293.0,244.0>>/B<<293.0,244.0>-<297.0,276.0>-<305.0,319.5>> = 14.25003269780357 
 
-	* And 6 more.
+	* 6 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-jaggy-segments]
-</div></details><br></div></details><details><summary><b>[12] NotoSansTeluguUI-ExtraLight.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[13] NotoSansTeluguUI-ExtraLight.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
+
+
+* 🔥 **FAIL** This is a Noto font but it lacks an ARTICLE.en_us.html file [code: missing-article]
+</div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
 * 🔥 **FAIL** OS/2.usWinAscent value should be equal or greater than 1105, but got 1069 instead [code: ascent]
@@ -3295,7 +3351,7 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 	- bar 
 
-	- And 163 more.
+	- 163 more.
 
 Use -F or --full-lists to disable shortening of long lists.
  [code: unreachable-glyphs]
@@ -3319,13 +3375,13 @@ The following glyphs do not have the recommended number of contours:
 
 	- Glyph name: uni25CC	Contours detected: 8	Expected: 16 or 12 
 
-	- And Glyph name: uogonek	Contours detected: 2	Expected: 1
+	- Glyph name: uogonek	Contours detected: 2	Expected: 1
  [code: contour-count]
 </div></details><details><summary>⚠ <b>WARN:</b> Check glyphs in mark glyph class are non-spacing. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_spacing_marks">com.google.fonts/check/gdef_spacing_marks</a>)</summary><div>
 
 
 * ⚠ **WARN** The following spacing glyphs may be in the GDEF mark glyph class by mistake:
-	 aavowelsign2telu (unencoded), aavowelsigntelu (U+0C3E), basubscript1telu (unencoded), basubscripttelu (unencoded), bhasubscript1telu (unencoded), bhasubscripttelu (unencoded), casubscript1telu (unencoded), casubscripttelu (unencoded), chasubscript1telu (unencoded), chasubscripttelu (unencoded) and 68 more.
+	 aavowelsign2telu (unencoded), aavowelsigntelu (U+0C3E), basubscript1telu (unencoded), basubscripttelu (unencoded), bhasubscript1telu (unencoded), bhasubscripttelu (unencoded), casubscript1UItelu (unencoded), casubscript1telu (unencoded), casubscripttelu (unencoded), chasubscript1telu (unencoded) and 69 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-glyphs]
 </div></details><details><summary>⚠ <b>WARN:</b> Check mark characters are in GDEF mark glyph class. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_mark_chars">com.google.fonts/check/gdef_mark_chars</a>)</summary><div>
@@ -3363,7 +3419,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-
 
 	* w (U+0077): X=378.0,Y=622.0 (should be at cap-height 620?) 
 
-	* And 72 more.
+	* 71 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-misalignments]
 </div></details><details><summary>⚠ <b>WARN:</b> Are any segments inordinately short? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_short_segments">com.google.fonts/check/outline_short_segments</a>)</summary><div>
@@ -3391,7 +3447,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 
 	* m (U+006D) contains a short segment L<<126.0,531.0>--<129.0,531.0>> 
 
-	* And 79 more.
+	* 78 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-short-segments]
 </div></details><details><summary>⚠ <b>WARN:</b> Do outlines contain any jaggy segments? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_jaggy_segments">com.google.fonts/check/outline_jaggy_segments</a>)</summary><div>
@@ -3400,7 +3456,11 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-short-s
 * ⚠ **WARN** The following glyphs have jaggy segments:
 
 	* tatelu (U+0C24): B<<586.0,489.5>-<603.0,483.0>-<617.0,473.0>>/B<<617.0,473.0>-<594.0,498.0>-<558.5,515.0>> = 11.8482662384144 [code: found-jaggy-segments]
-</div></details><br></div></details><details><summary><b>[12] NotoSansTeluguUI-Light.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[13] NotoSansTeluguUI-Light.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
+
+
+* 🔥 **FAIL** This is a Noto font but it lacks an ARTICLE.en_us.html file [code: missing-article]
+</div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
 * 🔥 **FAIL** OS/2.usWinAscent value should be equal or greater than 1105, but got 1069 instead [code: ascent]
@@ -3445,7 +3505,7 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 	- bar 
 
-	- And 163 more.
+	- 163 more.
 
 Use -F or --full-lists to disable shortening of long lists.
  [code: unreachable-glyphs]
@@ -3469,13 +3529,13 @@ The following glyphs do not have the recommended number of contours:
 
 	- Glyph name: uni25CC	Contours detected: 8	Expected: 16 or 12 
 
-	- And Glyph name: uogonek	Contours detected: 2	Expected: 1
+	- Glyph name: uogonek	Contours detected: 2	Expected: 1
  [code: contour-count]
 </div></details><details><summary>⚠ <b>WARN:</b> Check glyphs in mark glyph class are non-spacing. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_spacing_marks">com.google.fonts/check/gdef_spacing_marks</a>)</summary><div>
 
 
 * ⚠ **WARN** The following spacing glyphs may be in the GDEF mark glyph class by mistake:
-	 aavowelsign2telu (unencoded), aavowelsigntelu (U+0C3E), basubscript1telu (unencoded), basubscripttelu (unencoded), bhasubscript1telu (unencoded), bhasubscripttelu (unencoded), casubscript1telu (unencoded), casubscripttelu (unencoded), chasubscript1telu (unencoded), chasubscripttelu (unencoded) and 68 more.
+	 aavowelsign2telu (unencoded), aavowelsigntelu (U+0C3E), basubscript1telu (unencoded), basubscripttelu (unencoded), bhasubscript1telu (unencoded), bhasubscripttelu (unencoded), casubscript1UItelu (unencoded), casubscript1telu (unencoded), casubscripttelu (unencoded), chasubscript1telu (unencoded) and 69 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-glyphs]
 </div></details><details><summary>⚠ <b>WARN:</b> Check mark characters are in GDEF mark glyph class. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_mark_chars">com.google.fonts/check/gdef_mark_chars</a>)</summary><div>
@@ -3513,7 +3573,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-
 
 	* registered (U+00AE): X=339.0,Y=621.0 (should be at cap-height 620?) 
 
-	* And 39 more.
+	* 38 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-misalignments]
 </div></details><details><summary>⚠ <b>WARN:</b> Do any segments have colinear vectors? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_colinear_vectors">com.google.fonts/check/outline_colinear_vectors</a>)</summary><div>
@@ -3523,14 +3583,18 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 
 	* aatelu (U+0C06): L<<92.0,372.0>--<92.0,371.0>> -> L<<92.0,371.0>--<92.0,363.0>> 
 
-	* And atelu (U+0C05): L<<92.0,372.0>--<92.0,371.0>> -> L<<92.0,371.0>--<92.0,363.0>> [code: found-colinear-vectors]
+	* atelu (U+0C05): L<<92.0,372.0>--<92.0,371.0>> -> L<<92.0,371.0>--<92.0,363.0>> [code: found-colinear-vectors]
 </div></details><details><summary>⚠ <b>WARN:</b> Do outlines contain any jaggy segments? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_jaggy_segments">com.google.fonts/check/outline_jaggy_segments</a>)</summary><div>
 
 
 * ⚠ **WARN** The following glyphs have jaggy segments:
 
 	* tatelu (U+0C24): B<<576.0,496.0>-<587.0,493.0>-<598.0,488.0>>/B<<598.0,488.0>-<564.0,512.0>-<512.5,525.0>> = 10.773638187776136 [code: found-jaggy-segments]
-</div></details><br></div></details><details><summary><b>[11] NotoSansTeluguUI-Medium.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[12] NotoSansTeluguUI-Medium.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
+
+
+* 🔥 **FAIL** This is a Noto font but it lacks an ARTICLE.en_us.html file [code: missing-article]
+</div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
 * 🔥 **FAIL** OS/2.usWinAscent value should be equal or greater than 1105, but got 1069 instead [code: ascent]
@@ -3575,7 +3639,7 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 	- bar 
 
-	- And 163 more.
+	- 163 more.
 
 Use -F or --full-lists to disable shortening of long lists.
  [code: unreachable-glyphs]
@@ -3599,13 +3663,13 @@ The following glyphs do not have the recommended number of contours:
 
 	- Glyph name: uni25CC	Contours detected: 8	Expected: 16 or 12 
 
-	- And Glyph name: uogonek	Contours detected: 2	Expected: 1
+	- Glyph name: uogonek	Contours detected: 2	Expected: 1
  [code: contour-count]
 </div></details><details><summary>⚠ <b>WARN:</b> Check glyphs in mark glyph class are non-spacing. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_spacing_marks">com.google.fonts/check/gdef_spacing_marks</a>)</summary><div>
 
 
 * ⚠ **WARN** The following spacing glyphs may be in the GDEF mark glyph class by mistake:
-	 aavowelsign2telu (unencoded), aavowelsigntelu (U+0C3E), basubscript1telu (unencoded), basubscripttelu (unencoded), bhasubscript1telu (unencoded), bhasubscripttelu (unencoded), casubscript1telu (unencoded), casubscripttelu (unencoded), chasubscript1telu (unencoded), chasubscripttelu (unencoded) and 68 more.
+	 aavowelsign2telu (unencoded), aavowelsigntelu (U+0C3E), basubscript1telu (unencoded), basubscripttelu (unencoded), bhasubscript1telu (unencoded), bhasubscripttelu (unencoded), casubscript1UItelu (unencoded), casubscript1telu (unencoded), casubscripttelu (unencoded), chasubscript1telu (unencoded) and 69 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-glyphs]
 </div></details><details><summary>⚠ <b>WARN:</b> Check mark characters are in GDEF mark glyph class. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_mark_chars">com.google.fonts/check/gdef_mark_chars</a>)</summary><div>
@@ -3643,7 +3707,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-
 
 	* q (U+0071): X=371.0,Y=618.0 (should be at cap-height 620?) 
 
-	* And 45 more.
+	* 45 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-misalignments]
 </div></details><details><summary>⚠ <b>WARN:</b> Do outlines contain any jaggy segments? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_jaggy_segments">com.google.fonts/check/outline_jaggy_segments</a>)</summary><div>
@@ -3652,7 +3716,11 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 * ⚠ **WARN** The following glyphs have jaggy segments:
 
 	* natelu (U+0C28): L<<247.0,509.0>--<247.0,509.0>>/B<<247.0,509.0>-<213.0,510.0>-<184.0,522.5>> = 1.68468431789628 [code: found-jaggy-segments]
-</div></details><br></div></details><details><summary><b>[11] NotoSansTeluguUI-Regular.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[12] NotoSansTeluguUI-Regular.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
+
+
+* 🔥 **FAIL** This is a Noto font but it lacks an ARTICLE.en_us.html file [code: missing-article]
+</div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
 * 🔥 **FAIL** OS/2.usWinAscent value should be equal or greater than 1105, but got 1069 instead [code: ascent]
@@ -3690,7 +3758,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 
 	- bar 
 
-	- And 163 more.
+	- 163 more.
 
 Use -F or --full-lists to disable shortening of long lists.
  [code: unreachable-glyphs]
@@ -3714,13 +3782,13 @@ The following glyphs do not have the recommended number of contours:
 
 	- Glyph name: uni25CC	Contours detected: 8	Expected: 16 or 12 
 
-	- And Glyph name: uogonek	Contours detected: 2	Expected: 1
+	- Glyph name: uogonek	Contours detected: 2	Expected: 1
  [code: contour-count]
 </div></details><details><summary>⚠ <b>WARN:</b> Check glyphs in mark glyph class are non-spacing. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_spacing_marks">com.google.fonts/check/gdef_spacing_marks</a>)</summary><div>
 
 
 * ⚠ **WARN** The following spacing glyphs may be in the GDEF mark glyph class by mistake:
-	 aavowelsign2telu (unencoded), aavowelsigntelu (U+0C3E), basubscript1telu (unencoded), basubscripttelu (unencoded), bhasubscript1telu (unencoded), bhasubscripttelu (unencoded), casubscript1telu (unencoded), casubscripttelu (unencoded), chasubscript1telu (unencoded), chasubscripttelu (unencoded) and 68 more.
+	 aavowelsign2telu (unencoded), aavowelsigntelu (U+0C3E), basubscript1telu (unencoded), basubscripttelu (unencoded), bhasubscript1telu (unencoded), bhasubscripttelu (unencoded), casubscript1UItelu (unencoded), casubscript1telu (unencoded), casubscripttelu (unencoded), chasubscript1telu (unencoded) and 69 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-glyphs]
 </div></details><details><summary>⚠ <b>WARN:</b> Check mark characters are in GDEF mark glyph class. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_mark_chars">com.google.fonts/check/gdef_mark_chars</a>)</summary><div>
@@ -3758,7 +3826,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-
 
 	* oslash (U+00F8): X=533.0,Y=621.0 (should be at cap-height 620?) 
 
-	* And 60 more.
+	* 60 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-misalignments]
 </div></details><details><summary>⚠ <b>WARN:</b> Do any segments have colinear vectors? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_colinear_vectors">com.google.fonts/check/outline_colinear_vectors</a>)</summary><div>
@@ -3768,14 +3836,18 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 
 	* nnatelu (U+0C23): L<<708.0,314.0>--<708.0,319.0>> -> L<<708.0,319.0>--<708.0,332.0>> 
 
-	* And uni0C7F (U+0C7F): L<<128.0,352.0>--<128.0,349.0>> -> L<<128.0,349.0>--<128.0,343.0>> [code: found-colinear-vectors]
+	* uni0C7F (U+0C7F): L<<128.0,352.0>--<128.0,349.0>> -> L<<128.0,349.0>--<128.0,343.0>> [code: found-colinear-vectors]
 </div></details><details><summary>⚠ <b>WARN:</b> Do outlines contain any jaggy segments? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_jaggy_segments">com.google.fonts/check/outline_jaggy_segments</a>)</summary><div>
 
 
 * ⚠ **WARN** The following glyphs have jaggy segments:
 
 	* tatelu (U+0C24): B<<561.0,502.0>-<565.0,502.0>-<571.0,501.0>>/B<<571.0,501.0>-<541.0,510.0>-<504.0,515.0>> = 7.236922025967975 [code: found-jaggy-segments]
-</div></details><br></div></details><details><summary><b>[12] NotoSansTeluguUI-SemiBold.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[13] NotoSansTeluguUI-SemiBold.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
+
+
+* 🔥 **FAIL** This is a Noto font but it lacks an ARTICLE.en_us.html file [code: missing-article]
+</div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
 * 🔥 **FAIL** OS/2.usWinAscent value should be equal or greater than 1105, but got 1069 instead [code: ascent]
@@ -3820,7 +3892,7 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 	- bar 
 
-	- And 163 more.
+	- 163 more.
 
 Use -F or --full-lists to disable shortening of long lists.
  [code: unreachable-glyphs]
@@ -3844,13 +3916,13 @@ The following glyphs do not have the recommended number of contours:
 
 	- Glyph name: uni25CC	Contours detected: 8	Expected: 16 or 12 
 
-	- And Glyph name: uogonek	Contours detected: 2	Expected: 1
+	- Glyph name: uogonek	Contours detected: 2	Expected: 1
  [code: contour-count]
 </div></details><details><summary>⚠ <b>WARN:</b> Check glyphs in mark glyph class are non-spacing. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_spacing_marks">com.google.fonts/check/gdef_spacing_marks</a>)</summary><div>
 
 
 * ⚠ **WARN** The following spacing glyphs may be in the GDEF mark glyph class by mistake:
-	 aavowelsign2telu (unencoded), aavowelsigntelu (U+0C3E), basubscript1telu (unencoded), basubscripttelu (unencoded), bhasubscript1telu (unencoded), bhasubscripttelu (unencoded), casubscript1telu (unencoded), casubscripttelu (unencoded), chasubscript1telu (unencoded), chasubscripttelu (unencoded) and 68 more.
+	 aavowelsign2telu (unencoded), aavowelsigntelu (U+0C3E), basubscript1telu (unencoded), basubscripttelu (unencoded), bhasubscript1telu (unencoded), bhasubscripttelu (unencoded), casubscript1UItelu (unencoded), casubscript1telu (unencoded), casubscripttelu (unencoded), chasubscript1telu (unencoded) and 69 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-glyphs]
 </div></details><details><summary>⚠ <b>WARN:</b> Check mark characters are in GDEF mark glyph class. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_mark_chars">com.google.fonts/check/gdef_mark_chars</a>)</summary><div>
@@ -3888,7 +3960,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-
 
 	* b (U+0062): X=235.0,Y=502.0 (should be at x-height 500?) 
 
-	* And 46 more.
+	* 46 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-misalignments]
 </div></details><details><summary>⚠ <b>WARN:</b> Do any segments have colinear vectors? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_colinear_vectors">com.google.fonts/check/outline_colinear_vectors</a>)</summary><div>
@@ -3898,7 +3970,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 
 	* lllatelu (U+0C34): L<<149.0,337.0>--<149.0,336.0>> -> L<<149.0,336.0>--<149.0,324.0>> 
 
-	* And ttatelu (U+0C1F): L<<149.0,337.0>--<149.0,336.0>> -> L<<149.0,336.0>--<149.0,324.0>> [code: found-colinear-vectors]
+	* ttatelu (U+0C1F): L<<149.0,337.0>--<149.0,336.0>> -> L<<149.0,336.0>--<149.0,324.0>> [code: found-colinear-vectors]
 </div></details><details><summary>⚠ <b>WARN:</b> Do outlines contain any jaggy segments? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_jaggy_segments">com.google.fonts/check/outline_jaggy_segments</a>)</summary><div>
 
 
@@ -3924,8 +3996,12 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 
 	* Wgrave (U+1E80): B<<678.0,275.0>-<684.0,243.0>-<687.0,219.0>>/B<<687.0,219.0>-<690.0,244.0>-<695.5,276.0>> = 13.967789761532726 
 
-	* And natelu (U+0C28): L<<257.0,500.0>--<257.0,500.0>>/B<<257.0,500.0>-<198.0,501.0>-<157.0,533.5>> = 0.9710219310788218 [code: found-jaggy-segments]
-</div></details><br></div></details><details><summary><b>[11] NotoSansTeluguUI-Thin.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
+	* natelu (U+0C28): L<<257.0,500.0>--<257.0,500.0>>/B<<257.0,500.0>-<198.0,501.0>-<157.0,533.5>> = 0.9710219310788218 [code: found-jaggy-segments]
+</div></details><br></div></details><details><summary><b>[12] NotoSansTeluguUI-Thin.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
+
+
+* 🔥 **FAIL** This is a Noto font but it lacks an ARTICLE.en_us.html file [code: missing-article]
+</div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
 * 🔥 **FAIL** OS/2.usWinAscent value should be equal or greater than 1105, but got 1069 instead [code: ascent]
@@ -3970,7 +4046,7 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 	- bar 
 
-	- And 163 more.
+	- 163 more.
 
 Use -F or --full-lists to disable shortening of long lists.
  [code: unreachable-glyphs]
@@ -3994,13 +4070,13 @@ The following glyphs do not have the recommended number of contours:
 
 	- Glyph name: uni25CC	Contours detected: 8	Expected: 16 or 12 
 
-	- And Glyph name: uogonek	Contours detected: 2	Expected: 1
+	- Glyph name: uogonek	Contours detected: 2	Expected: 1
  [code: contour-count]
 </div></details><details><summary>⚠ <b>WARN:</b> Check glyphs in mark glyph class are non-spacing. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_spacing_marks">com.google.fonts/check/gdef_spacing_marks</a>)</summary><div>
 
 
 * ⚠ **WARN** The following spacing glyphs may be in the GDEF mark glyph class by mistake:
-	 aavowelsign2telu (unencoded), aavowelsigntelu (U+0C3E), basubscript1telu (unencoded), basubscripttelu (unencoded), bhasubscript1telu (unencoded), bhasubscripttelu (unencoded), casubscript1telu (unencoded), casubscripttelu (unencoded), chasubscript1telu (unencoded), chasubscripttelu (unencoded) and 68 more.
+	 aavowelsign2telu (unencoded), aavowelsigntelu (U+0C3E), basubscript1telu (unencoded), basubscripttelu (unencoded), bhasubscript1telu (unencoded), bhasubscripttelu (unencoded), casubscript1UItelu (unencoded), casubscript1telu (unencoded), casubscripttelu (unencoded), chasubscript1telu (unencoded) and 69 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-glyphs]
 </div></details><details><summary>⚠ <b>WARN:</b> Check mark characters are in GDEF mark glyph class. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_mark_chars">com.google.fonts/check/gdef_mark_chars</a>)</summary><div>
@@ -4020,7 +4096,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-
 
 	* llatelu (U+0C33): B<<200.5,236.0>-<225.0,259.0>-<267.0,267.0>>/B<<267.0,267.0>-<141.0,273.0>-<86.0,312.5>> = 13.510608861468855 
 
-	* And tatelu (U+0C24): B<<592.5,485.5>-<613.0,476.0>-<629.0,461.0>>/B<<629.0,461.0>-<607.0,493.0>-<568.5,514.0>> = 12.33908727832621 [code: found-jaggy-segments]
+	* tatelu (U+0C24): B<<592.5,485.5>-<613.0,476.0>-<629.0,461.0>>/B<<629.0,461.0>-<607.0,493.0>-<568.5,514.0>> = 12.33908727832621 [code: found-jaggy-segments]
 </div></details><details><summary>⚠ <b>WARN:</b> Do outlines contain any semi-vertical or semi-horizontal lines? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_semi_vertical">com.google.fonts/check/outline_semi_vertical</a>)</summary><div>
 
 
@@ -4032,8 +4108,8 @@ Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-
 
 	* exclamdown (U+00A1): L<<122.0,447.0>--<124.0,-93.0>> 
 
-	* And exclamdown (U+00A1): L<<96.0,-93.0>--<98.0,447.0>> [code: found-semi-vertical]
-</div></details><br></div></details><details><summary><b>[8] NotoSansTelugu[wdth,wght].ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check font names are correct (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/font_names">com.google.fonts/check/font_names</a>)</summary><div>
+	* exclamdown (U+00A1): L<<96.0,-93.0>--<98.0,447.0>> [code: found-semi-vertical]
+</div></details><br></div></details><details><summary><b>[9] NotoSansTelugu[wdth,wght].ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check font names are correct (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/font_names">com.google.fonts/check/font_names</a>)</summary><div>
 
 
 * 💔 **ERROR** The condition <FontBakeryCondition:expected_font_names> had an error: KeyError: 'fvar'
@@ -4045,6 +4121,10 @@ Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-
 
 
 * 💔 **ERROR** The condition <FontBakeryCondition:expected_font_names> had an error: KeyError: 'fvar'
+</div></details><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
+
+
+* 🔥 **FAIL** This is a Noto font but it lacks an ARTICLE.en_us.html file [code: missing-article]
 </div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
@@ -4082,7 +4162,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-
 
 	- bar 
 
-	- And 163 more.
+	- 163 more.
 
 Use -F or --full-lists to disable shortening of long lists.
  [code: unreachable-glyphs]
@@ -4094,11 +4174,12 @@ Use -F or --full-lists to disable shortening of long lists.
 
 Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]
 </div></details><br></div></details>
+
 ### Summary
 
 | 💔 ERROR | 🔥 FAIL | ⚠ WARN | 💤 SKIP | ℹ INFO | 🍞 PASS | 🔎 DEBUG |
 |:-----:|:----:|:----:|:----:|:----:|:----:|:----:|
-| 3 | 43 | 171 | 2067 | 116 | 1643 | 0 |
+| 3 | 63 | 171 | 2173 | 116 | 1746 | 0 |
 | 0% | 1% | 4% | 51% | 3% | 41% | 0% |
 
 **Note:** The following loglevels were omitted in this report:
