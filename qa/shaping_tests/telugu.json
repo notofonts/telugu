@@ -1,6 +1,12 @@
 {
     "tests": [
         {
+            "expectation": "tatelu=0+773|vasubscripttelu=0+458|uni0951=0@-556,293+0|space=4+283|tatelu=5+773|yasubscripttelu=5+458|uni0951=5@-556,293+0",
+            "input": "త్వ॑ త్య॑",
+            "only": "NotoSansTelugu-Regular.ttf",
+            "note": "#10"
+        },
+        {
             "expectation": "exclam.telu=0+298|matelu=1+1058|rivoweltelu=2+593|yatelu=4+1286|uvowelsigntelu=4+346|question.telu=6+471|exclam.telu=7+298|exclam.telu=8+298",
             "input": "!మరియు?!!",
             "note": "fontdiff-21-NotoSansTeluguUI.html",
