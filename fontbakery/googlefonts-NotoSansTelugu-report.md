@@ -243,7 +243,7 @@ The following glyphs do not have the recommended number of contours:
 
 
 * ⚠ **WARN** The following spacing glyphs may be in the GDEF mark glyph class by mistake:
-	 aavowelsigntelu (U+0C3E), aavoweltelu.spacing2 (unencoded), bapostscriptUItelu (unencoded), bapostscriptUItelu.spacing (unencoded), bapostscripttelu (unencoded), bapostscripttelu.spacing (unencoded), bhapostscriptUItelu (unencoded), bhapostscriptUItelu.spacing (unencoded), bhapostscripttelu (unencoded), bhapostscripttelu.spacing (unencoded) and 111 more.
+	 aavowelsigntelu (U+0C3E), aavowelsigntelu.spacing (unencoded), aavoweltelu.spacing2 (unencoded), auvowelsigntelu.spacing (unencoded), auvoweltelu.spacing2 (unencoded), auvoweltelu.spacing3 (unencoded), baalttelu.spacing (unencoded), bapostscriptUItelu (unencoded), bapostscriptUItelu.spacing (unencoded), bapostscripttelu (unencoded) and 142 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-glyphs]
 </div></details><details><summary>⚠ <b>WARN:</b> Check mark characters are in GDEF mark glyph class. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_mark_chars">com.google.fonts/check/gdef_mark_chars</a>)</summary><div>
@@ -413,7 +413,7 @@ The following glyphs do not have the recommended number of contours:
 
 
 * ⚠ **WARN** The following spacing glyphs may be in the GDEF mark glyph class by mistake:
-	 aavowelsigntelu (U+0C3E), aavoweltelu.spacing2 (unencoded), bapostscriptUItelu (unencoded), bapostscriptUItelu.spacing (unencoded), bapostscripttelu (unencoded), bapostscripttelu.spacing (unencoded), bhapostscriptUItelu (unencoded), bhapostscriptUItelu.spacing (unencoded), bhapostscripttelu (unencoded), bhapostscripttelu.spacing (unencoded) and 111 more.
+	 aavowelsigntelu (U+0C3E), aavowelsigntelu.spacing (unencoded), aavoweltelu.spacing2 (unencoded), auvowelsigntelu.spacing (unencoded), auvoweltelu.spacing2 (unencoded), auvoweltelu.spacing3 (unencoded), baalttelu.spacing (unencoded), bapostscriptUItelu (unencoded), bapostscriptUItelu.spacing (unencoded), bapostscripttelu (unencoded) and 142 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-glyphs]
 </div></details><details><summary>⚠ <b>WARN:</b> Check mark characters are in GDEF mark glyph class. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_mark_chars">com.google.fonts/check/gdef_mark_chars</a>)</summary><div>
@@ -562,7 +562,7 @@ The following glyphs do not have the recommended number of contours:
 
 
 * ⚠ **WARN** The following spacing glyphs may be in the GDEF mark glyph class by mistake:
-	 aavowelsigntelu (U+0C3E), aavoweltelu.spacing2 (unencoded), bapostscriptUItelu (unencoded), bapostscriptUItelu.spacing (unencoded), bapostscripttelu (unencoded), bapostscripttelu.spacing (unencoded), bhapostscriptUItelu (unencoded), bhapostscriptUItelu.spacing (unencoded), bhapostscripttelu (unencoded), bhapostscripttelu.spacing (unencoded) and 111 more.
+	 aavowelsigntelu (U+0C3E), aavowelsigntelu.spacing (unencoded), aavoweltelu.spacing2 (unencoded), auvowelsigntelu.spacing (unencoded), auvoweltelu.spacing2 (unencoded), auvoweltelu.spacing3 (unencoded), baalttelu.spacing (unencoded), bapostscriptUItelu (unencoded), bapostscriptUItelu.spacing (unencoded), bapostscripttelu (unencoded) and 142 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-glyphs]
 </div></details><details><summary>⚠ <b>WARN:</b> Check mark characters are in GDEF mark glyph class. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_mark_chars">com.google.fonts/check/gdef_mark_chars</a>)</summary><div>
@@ -702,7 +702,7 @@ The following glyphs do not have the recommended number of contours:
 
 
 * ⚠ **WARN** The following spacing glyphs may be in the GDEF mark glyph class by mistake:
-	 aavowelsigntelu (U+0C3E), aavoweltelu.spacing2 (unencoded), bapostscriptUItelu (unencoded), bapostscriptUItelu.spacing (unencoded), bapostscripttelu (unencoded), bapostscripttelu.spacing (unencoded), bhapostscriptUItelu (unencoded), bhapostscriptUItelu.spacing (unencoded), bhapostscripttelu (unencoded), bhapostscripttelu.spacing (unencoded) and 111 more.
+	 aavowelsigntelu (U+0C3E), aavowelsigntelu.spacing (unencoded), aavoweltelu.spacing2 (unencoded), auvowelsigntelu.spacing (unencoded), auvoweltelu.spacing2 (unencoded), auvoweltelu.spacing3 (unencoded), baalttelu.spacing (unencoded), bapostscriptUItelu (unencoded), bapostscriptUItelu.spacing (unencoded), bapostscripttelu (unencoded) and 142 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-glyphs]
 </div></details><details><summary>⚠ <b>WARN:</b> Check mark characters are in GDEF mark glyph class. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_mark_chars">com.google.fonts/check/gdef_mark_chars</a>)</summary><div>
@@ -857,7 +857,7 @@ The following glyphs do not have the recommended number of contours:
 
 
 * ⚠ **WARN** The following spacing glyphs may be in the GDEF mark glyph class by mistake:
-	 aavowelsigntelu (U+0C3E), aavoweltelu.spacing2 (unencoded), bapostscriptUItelu (unencoded), bapostscriptUItelu.spacing (unencoded), bapostscripttelu (unencoded), bapostscripttelu.spacing (unencoded), bhapostscriptUItelu (unencoded), bhapostscriptUItelu.spacing (unencoded), bhapostscripttelu (unencoded), bhapostscripttelu.spacing (unencoded) and 111 more.
+	 aavowelsigntelu (U+0C3E), aavowelsigntelu.spacing (unencoded), aavoweltelu.spacing2 (unencoded), auvowelsigntelu.spacing (unencoded), auvoweltelu.spacing2 (unencoded), auvoweltelu.spacing3 (unencoded), baalttelu.spacing (unencoded), bapostscriptUItelu (unencoded), bapostscriptUItelu.spacing (unencoded), bapostscripttelu (unencoded) and 142 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-glyphs]
 </div></details><details><summary>⚠ <b>WARN:</b> Check mark characters are in GDEF mark glyph class. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_mark_chars">com.google.fonts/check/gdef_mark_chars</a>)</summary><div>
@@ -1020,7 +1020,7 @@ The following glyphs do not have the recommended number of contours:
 
 
 * ⚠ **WARN** The following spacing glyphs may be in the GDEF mark glyph class by mistake:
-	 aavowelsigntelu (U+0C3E), aavoweltelu.spacing2 (unencoded), bapostscriptUItelu (unencoded), bapostscriptUItelu.spacing (unencoded), bapostscripttelu (unencoded), bapostscripttelu.spacing (unencoded), bhapostscriptUItelu (unencoded), bhapostscriptUItelu.spacing (unencoded), bhapostscripttelu (unencoded), bhapostscripttelu.spacing (unencoded) and 111 more.
+	 aavowelsigntelu (U+0C3E), aavowelsigntelu.spacing (unencoded), aavoweltelu.spacing2 (unencoded), auvowelsigntelu.spacing (unencoded), auvoweltelu.spacing2 (unencoded), auvoweltelu.spacing3 (unencoded), baalttelu.spacing (unencoded), bapostscriptUItelu (unencoded), bapostscriptUItelu.spacing (unencoded), bapostscripttelu (unencoded) and 142 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-glyphs]
 </div></details><details><summary>⚠ <b>WARN:</b> Check mark characters are in GDEF mark glyph class. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_mark_chars">com.google.fonts/check/gdef_mark_chars</a>)</summary><div>
@@ -8647,7 +8647,7 @@ The following glyphs do not have the recommended number of contours:
 
 
 * ⚠ **WARN** The following spacing glyphs may be in the GDEF mark glyph class by mistake:
-	 aavowelsigntelu (U+0C3E), aavoweltelu.spacing2 (unencoded), bapostscriptUItelu (unencoded), bapostscriptUItelu.spacing (unencoded), bapostscripttelu (unencoded), bapostscripttelu.spacing (unencoded), bhapostscriptUItelu (unencoded), bhapostscriptUItelu.spacing (unencoded), bhapostscripttelu (unencoded), bhapostscripttelu.spacing (unencoded) and 111 more.
+	 aavowelsigntelu (U+0C3E), aavowelsigntelu.spacing (unencoded), aavoweltelu.spacing2 (unencoded), auvowelsigntelu.spacing (unencoded), auvoweltelu.spacing2 (unencoded), auvoweltelu.spacing3 (unencoded), baalttelu.spacing (unencoded), bapostscriptUItelu (unencoded), bapostscriptUItelu.spacing (unencoded), bapostscripttelu (unencoded) and 142 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-glyphs]
 </div></details><details><summary>⚠ <b>WARN:</b> Check mark characters are in GDEF mark glyph class. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_mark_chars">com.google.fonts/check/gdef_mark_chars</a>)</summary><div>
@@ -8782,7 +8782,7 @@ The following glyphs do not have the recommended number of contours:
 
 
 * ⚠ **WARN** The following spacing glyphs may be in the GDEF mark glyph class by mistake:
-	 aavowelsigntelu (U+0C3E), aavoweltelu.spacing2 (unencoded), bapostscriptUItelu (unencoded), bapostscriptUItelu.spacing (unencoded), bapostscripttelu (unencoded), bapostscripttelu.spacing (unencoded), bhapostscriptUItelu (unencoded), bhapostscriptUItelu.spacing (unencoded), bhapostscripttelu (unencoded), bhapostscripttelu.spacing (unencoded) and 111 more.
+	 aavowelsigntelu (U+0C3E), aavowelsigntelu.spacing (unencoded), aavoweltelu.spacing2 (unencoded), auvowelsigntelu.spacing (unencoded), auvoweltelu.spacing2 (unencoded), auvoweltelu.spacing3 (unencoded), baalttelu.spacing (unencoded), bapostscriptUItelu (unencoded), bapostscriptUItelu.spacing (unencoded), bapostscripttelu (unencoded) and 142 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-glyphs]
 </div></details><details><summary>⚠ <b>WARN:</b> Check mark characters are in GDEF mark glyph class. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_mark_chars">com.google.fonts/check/gdef_mark_chars</a>)</summary><div>
@@ -8921,7 +8921,7 @@ The following glyphs do not have the recommended number of contours:
 
 
 * ⚠ **WARN** The following spacing glyphs may be in the GDEF mark glyph class by mistake:
-	 aavowelsigntelu (U+0C3E), aavoweltelu.spacing2 (unencoded), bapostscriptUItelu (unencoded), bapostscriptUItelu.spacing (unencoded), bapostscripttelu (unencoded), bapostscripttelu.spacing (unencoded), bhapostscriptUItelu (unencoded), bhapostscriptUItelu.spacing (unencoded), bhapostscripttelu (unencoded), bhapostscripttelu.spacing (unencoded) and 111 more.
+	 aavowelsigntelu (U+0C3E), aavowelsigntelu.spacing (unencoded), aavoweltelu.spacing2 (unencoded), auvowelsigntelu.spacing (unencoded), auvoweltelu.spacing2 (unencoded), auvoweltelu.spacing3 (unencoded), baalttelu.spacing (unencoded), bapostscriptUItelu (unencoded), bapostscriptUItelu.spacing (unencoded), bapostscripttelu (unencoded) and 142 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-glyphs]
 </div></details><details><summary>⚠ <b>WARN:</b> Check mark characters are in GDEF mark glyph class. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_mark_chars">com.google.fonts/check/gdef_mark_chars</a>)</summary><div>
@@ -9047,7 +9047,7 @@ The following glyphs do not have the recommended number of contours:
 
 
 * ⚠ **WARN** The following spacing glyphs may be in the GDEF mark glyph class by mistake:
-	 aavowelsigntelu (U+0C3E), aavoweltelu.spacing2 (unencoded), bapostscriptUItelu (unencoded), bapostscriptUItelu.spacing (unencoded), bapostscripttelu (unencoded), bapostscripttelu.spacing (unencoded), bhapostscriptUItelu (unencoded), bhapostscriptUItelu.spacing (unencoded), bhapostscripttelu (unencoded), bhapostscripttelu.spacing (unencoded) and 111 more.
+	 aavowelsigntelu (U+0C3E), aavowelsigntelu.spacing (unencoded), aavoweltelu.spacing2 (unencoded), auvowelsigntelu.spacing (unencoded), auvoweltelu.spacing2 (unencoded), auvoweltelu.spacing3 (unencoded), baalttelu.spacing (unencoded), bapostscriptUItelu (unencoded), bapostscriptUItelu.spacing (unencoded), bapostscripttelu (unencoded) and 142 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-glyphs]
 </div></details><details><summary>⚠ <b>WARN:</b> Check mark characters are in GDEF mark glyph class. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_mark_chars">com.google.fonts/check/gdef_mark_chars</a>)</summary><div>
@@ -9202,7 +9202,7 @@ The following glyphs do not have the recommended number of contours:
 
 
 * ⚠ **WARN** The following spacing glyphs may be in the GDEF mark glyph class by mistake:
-	 aavowelsigntelu (U+0C3E), aavoweltelu.spacing2 (unencoded), bapostscriptUItelu (unencoded), bapostscriptUItelu.spacing (unencoded), bapostscripttelu (unencoded), bapostscripttelu.spacing (unencoded), bhapostscriptUItelu (unencoded), bhapostscriptUItelu.spacing (unencoded), bhapostscripttelu (unencoded), bhapostscripttelu.spacing (unencoded) and 111 more.
+	 aavowelsigntelu (U+0C3E), aavowelsigntelu.spacing (unencoded), aavoweltelu.spacing2 (unencoded), auvowelsigntelu.spacing (unencoded), auvoweltelu.spacing2 (unencoded), auvoweltelu.spacing3 (unencoded), baalttelu.spacing (unencoded), bapostscriptUItelu (unencoded), bapostscriptUItelu.spacing (unencoded), bapostscripttelu (unencoded) and 142 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-glyphs]
 </div></details><details><summary>⚠ <b>WARN:</b> Check mark characters are in GDEF mark glyph class. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_mark_chars">com.google.fonts/check/gdef_mark_chars</a>)</summary><div>
@@ -9364,7 +9364,7 @@ The following glyphs do not have the recommended number of contours:
 
 
 * ⚠ **WARN** The following spacing glyphs may be in the GDEF mark glyph class by mistake:
-	 aavowelsigntelu (U+0C3E), aavoweltelu.spacing2 (unencoded), bapostscriptUItelu (unencoded), bapostscriptUItelu.spacing (unencoded), bapostscripttelu (unencoded), bapostscripttelu.spacing (unencoded), bhapostscriptUItelu (unencoded), bhapostscriptUItelu.spacing (unencoded), bhapostscripttelu (unencoded), bhapostscripttelu.spacing (unencoded) and 111 more.
+	 aavowelsigntelu (U+0C3E), aavowelsigntelu.spacing (unencoded), aavoweltelu.spacing2 (unencoded), auvowelsigntelu.spacing (unencoded), auvoweltelu.spacing2 (unencoded), auvoweltelu.spacing3 (unencoded), baalttelu.spacing (unencoded), bapostscriptUItelu (unencoded), bapostscriptUItelu.spacing (unencoded), bapostscripttelu (unencoded) and 142 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-glyphs]
 </div></details><details><summary>⚠ <b>WARN:</b> Check mark characters are in GDEF mark glyph class. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_mark_chars">com.google.fonts/check/gdef_mark_chars</a>)</summary><div>
@@ -9526,7 +9526,7 @@ The following glyphs do not have the recommended number of contours:
 
 
 * ⚠ **WARN** The following spacing glyphs may be in the GDEF mark glyph class by mistake:
-	 aavowelsigntelu (U+0C3E), aavoweltelu.spacing2 (unencoded), bapostscriptUItelu (unencoded), bapostscriptUItelu.spacing (unencoded), bapostscripttelu (unencoded), bapostscripttelu.spacing (unencoded), bhapostscriptUItelu (unencoded), bhapostscriptUItelu.spacing (unencoded), bhapostscripttelu (unencoded), bhapostscripttelu.spacing (unencoded) and 111 more.
+	 aavowelsigntelu (U+0C3E), aavowelsigntelu.spacing (unencoded), aavoweltelu.spacing2 (unencoded), auvowelsigntelu.spacing (unencoded), auvoweltelu.spacing2 (unencoded), auvoweltelu.spacing3 (unencoded), baalttelu.spacing (unencoded), bapostscriptUItelu (unencoded), bapostscriptUItelu.spacing (unencoded), bapostscripttelu (unencoded) and 142 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-glyphs]
 </div></details><details><summary>⚠ <b>WARN:</b> Check mark characters are in GDEF mark glyph class. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_mark_chars">com.google.fonts/check/gdef_mark_chars</a>)</summary><div>
@@ -9694,7 +9694,7 @@ The following glyphs do not have the recommended number of contours:
 
 
 * ⚠ **WARN** The following spacing glyphs may be in the GDEF mark glyph class by mistake:
-	 aavowelsigntelu (U+0C3E), aavoweltelu.spacing2 (unencoded), bapostscriptUItelu (unencoded), bapostscriptUItelu.spacing (unencoded), bapostscripttelu (unencoded), bapostscripttelu.spacing (unencoded), bhapostscriptUItelu (unencoded), bhapostscriptUItelu.spacing (unencoded), bhapostscripttelu (unencoded), bhapostscripttelu.spacing (unencoded) and 111 more.
+	 aavowelsigntelu (U+0C3E), aavowelsigntelu.spacing (unencoded), aavoweltelu.spacing2 (unencoded), auvowelsigntelu.spacing (unencoded), auvoweltelu.spacing2 (unencoded), auvoweltelu.spacing3 (unencoded), baalttelu.spacing (unencoded), bapostscriptUItelu (unencoded), bapostscriptUItelu.spacing (unencoded), bapostscripttelu (unencoded) and 142 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-glyphs]
 </div></details><details><summary>⚠ <b>WARN:</b> Check mark characters are in GDEF mark glyph class. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_mark_chars">com.google.fonts/check/gdef_mark_chars</a>)</summary><div>
@@ -9842,7 +9842,7 @@ The following glyphs do not have the recommended number of contours:
 
 
 * ⚠ **WARN** The following spacing glyphs may be in the GDEF mark glyph class by mistake:
-	 aavowelsigntelu (U+0C3E), aavoweltelu.spacing2 (unencoded), bapostscriptUItelu (unencoded), bapostscriptUItelu.spacing (unencoded), bapostscripttelu (unencoded), bapostscripttelu.spacing (unencoded), bhapostscriptUItelu (unencoded), bhapostscriptUItelu.spacing (unencoded), bhapostscripttelu (unencoded), bhapostscripttelu.spacing (unencoded) and 111 more.
+	 aavowelsigntelu (U+0C3E), aavowelsigntelu.spacing (unencoded), aavoweltelu.spacing2 (unencoded), auvowelsigntelu.spacing (unencoded), auvoweltelu.spacing2 (unencoded), auvoweltelu.spacing3 (unencoded), baalttelu.spacing (unencoded), bapostscriptUItelu (unencoded), bapostscriptUItelu.spacing (unencoded), bapostscripttelu (unencoded) and 142 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-glyphs]
 </div></details><details><summary>⚠ <b>WARN:</b> Check mark characters are in GDEF mark glyph class. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_mark_chars">com.google.fonts/check/gdef_mark_chars</a>)</summary><div>
@@ -9975,7 +9975,7 @@ The following glyphs do not have the recommended number of contours:
 
 
 * ⚠ **WARN** The following spacing glyphs may be in the GDEF mark glyph class by mistake:
-	 aavowelsigntelu (U+0C3E), aavoweltelu.spacing2 (unencoded), bapostscriptUItelu (unencoded), bapostscriptUItelu.spacing (unencoded), bapostscripttelu (unencoded), bapostscripttelu.spacing (unencoded), bhapostscriptUItelu (unencoded), bhapostscriptUItelu.spacing (unencoded), bhapostscripttelu (unencoded), bhapostscripttelu.spacing (unencoded) and 111 more.
+	 aavowelsigntelu (U+0C3E), aavowelsigntelu.spacing (unencoded), aavoweltelu.spacing2 (unencoded), auvowelsigntelu.spacing (unencoded), auvoweltelu.spacing2 (unencoded), auvoweltelu.spacing3 (unencoded), baalttelu.spacing (unencoded), bapostscriptUItelu (unencoded), bapostscriptUItelu.spacing (unencoded), bapostscripttelu (unencoded) and 142 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-glyphs]
 </div></details><details><summary>⚠ <b>WARN:</b> Check mark characters are in GDEF mark glyph class. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_mark_chars">com.google.fonts/check/gdef_mark_chars</a>)</summary><div>
@@ -10123,7 +10123,7 @@ The following glyphs do not have the recommended number of contours:
 
 
 * ⚠ **WARN** The following spacing glyphs may be in the GDEF mark glyph class by mistake:
-	 aavowelsigntelu (U+0C3E), aavoweltelu.spacing2 (unencoded), bapostscriptUItelu (unencoded), bapostscriptUItelu.spacing (unencoded), bapostscripttelu (unencoded), bapostscripttelu.spacing (unencoded), bhapostscriptUItelu (unencoded), bhapostscriptUItelu.spacing (unencoded), bhapostscripttelu (unencoded), bhapostscripttelu.spacing (unencoded) and 111 more.
+	 aavowelsigntelu (U+0C3E), aavowelsigntelu.spacing (unencoded), aavoweltelu.spacing2 (unencoded), auvowelsigntelu.spacing (unencoded), auvoweltelu.spacing2 (unencoded), auvoweltelu.spacing3 (unencoded), baalttelu.spacing (unencoded), bapostscriptUItelu (unencoded), bapostscriptUItelu.spacing (unencoded), bapostscripttelu (unencoded) and 142 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-glyphs]
 </div></details><details><summary>⚠ <b>WARN:</b> Check mark characters are in GDEF mark glyph class. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_mark_chars">com.google.fonts/check/gdef_mark_chars</a>)</summary><div>
@@ -10291,7 +10291,7 @@ The following glyphs do not have the recommended number of contours:
 
 
 * ⚠ **WARN** The following spacing glyphs may be in the GDEF mark glyph class by mistake:
-	 aavowelsigntelu (U+0C3E), aavoweltelu.spacing2 (unencoded), bapostscriptUItelu (unencoded), bapostscriptUItelu.spacing (unencoded), bapostscripttelu (unencoded), bapostscripttelu.spacing (unencoded), bhapostscriptUItelu (unencoded), bhapostscriptUItelu.spacing (unencoded), bhapostscripttelu (unencoded), bhapostscripttelu.spacing (unencoded) and 111 more.
+	 aavowelsigntelu (U+0C3E), aavowelsigntelu.spacing (unencoded), aavoweltelu.spacing2 (unencoded), auvowelsigntelu.spacing (unencoded), auvoweltelu.spacing2 (unencoded), auvoweltelu.spacing3 (unencoded), baalttelu.spacing (unencoded), bapostscriptUItelu (unencoded), bapostscriptUItelu.spacing (unencoded), bapostscripttelu (unencoded) and 142 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-glyphs]
 </div></details><details><summary>⚠ <b>WARN:</b> Check mark characters are in GDEF mark glyph class. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_mark_chars">com.google.fonts/check/gdef_mark_chars</a>)</summary><div>
@@ -10400,7 +10400,7 @@ Use -F or --full-lists to disable shortening of long lists.
 
 
 * ⚠ **WARN** The following spacing glyphs may be in the GDEF mark glyph class by mistake:
-	 aavowelsigntelu (U+0C3E), aavoweltelu.spacing2 (unencoded), bapostscriptUItelu (unencoded), bapostscriptUItelu.spacing (unencoded), bapostscripttelu (unencoded), bapostscripttelu.spacing (unencoded), bhapostscriptUItelu (unencoded), bhapostscriptUItelu.spacing (unencoded), bhapostscripttelu (unencoded), bhapostscripttelu.spacing (unencoded) and 111 more.
+	 aavowelsigntelu (U+0C3E), aavowelsigntelu.spacing (unencoded), aavoweltelu.spacing2 (unencoded), auvowelsigntelu.spacing (unencoded), auvoweltelu.spacing2 (unencoded), auvoweltelu.spacing3 (unencoded), baalttelu.spacing (unencoded), bapostscriptUItelu (unencoded), bapostscriptUItelu.spacing (unencoded), bapostscripttelu (unencoded) and 142 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-glyphs]
 </div></details><details><summary>⚠ <b>WARN:</b> Check mark characters are in GDEF mark glyph class. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_mark_chars">com.google.fonts/check/gdef_mark_chars</a>)</summary><div>
