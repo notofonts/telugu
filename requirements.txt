@@ -1,6 +1,6 @@
 # This requires the latest versions of ufo2ft and glyphsLib to build
-git+https://github.com/googlefonts/ufo2ft@87c6881
-git+https://github.com/googlefonts/glyphsLib@dac814c
+ufo2ft>=2.32.0
+glyphsLib>=6.2.3
 git+https://github.com/notofonts/notobuilder
 drawbot-skia>=0.4.8
 sh>=1.14.2
