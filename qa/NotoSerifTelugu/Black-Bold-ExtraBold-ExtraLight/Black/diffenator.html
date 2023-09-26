@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+<head>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>GFR - Glyphs</title>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <style type="text/css">
+    
+
+        html{
+	  font-family: sans-serif;
+	}
+    @font-face {
+        font-family: "Adobe NotDef";
+        src: url(https://cdn.jsdelivr.net/gh/adobe-fonts/adobe-notdef/AND-Regular.ttf);
+    }
+	.box-title{
+	  width: 100%;
+	  font-size: 8pt;
+	  font-weight: 700;
+	  border-top: 1px solid black;
+	  padding-top: 5px;
+	  margin-bottom: 10pt;
+	  display: block;
+	}
+	.box{
+	  margin-bottom: 20pt;
+	  width: 100%;
+	  float: left;
+	}
+	.box-text{
+	}
+	
+	#nav{
+	  position: fixed;
+	  right: 20px;
+	  z-index: 100;
+	}
+	#font-toggle{
+	}
+	.nav-item{
+		display: block;
+		cursor: pointer;
+		-webkit-user-select: none; /* Safari */        
+		-moz-user-select: none; /* Firefox */
+			-ms-user-select: none; /* IE10+/Edge */
+		user-select: none; /* Standard */
+		text-align: center;
+		color: white;
+		background-color: black;
+		display: block;
+		font-size: 9pt;
+		padding: 5px;
+		margin: 2px;
+	}
+	.tooltip {
+	position: relative;
+	display: inline-block;
+	border-bottom: 1px dotted black;
+	}
+
+	.tooltip .tooltiptext {
+	font-family: sans-serif;
+	visibility: hidden;
+	width: 500px;
+	background-color: black;
+	color: #fff;
+	text-align: left;
+	font-size: 12pt;
+	line-height: 15pt;
+	border-radius: 6px;
+	padding: 5px 0;
+
+	/* Position the tooltip */
+	position: absolute;
+	z-index: 1;
+	}
+
+	.tooltip:hover .tooltiptext {
+	padding: 10px;
+	visibility: visible;
+	}
+	.tooltipleft {
+		float:left;
+		width: 249px;
+	}
+	.tooltipright {
+		float:right;
+		width:250px;
+	}
+
+			/* Stuff needed for the table differ */
+            body {
+                font-family: Helvetica;
+            }
+            .node {
+                font-family: courier;
+                cursor: pointer;
+                position: relative;
+                left: 30px;
+                padding: 5px;
+                display: block;
+                border: 1px dashed grey;
+            }
+            .header {
+            font-weight: bold;
+            }
+            .attrib-old{
+                color: red;
+                cursor: text;
+            }
+            .attrib-new{
+                color: green;
+                cursor: text;
+            }
+            .leaf {
+            font-weight: bold;
+            }
+            .old .cell .new {
+            	display:  none;
+            }
+            .new .cell .old {
+            	display:  none;
+            }
+            .both .cell .old {
+            	opacity: 0.75;
+            	color:  red;
+            }
+            .both .cell .new {
+            	opacity: 0.75;
+            	position: absolute;
+            	top: 0;
+            	color:  green;
+            }
+			.spacer {
+				display:block;
+				float:left;
+				width:100%;
+			}
+
+	  
+	    @font-face{
+    src: url(old-NotoSerifTelugu[wght].ttf);
+    font-family: "old font";
+    font-weight: 100 900;
+    
+    font-style: normal;
+}
+	  
+
+	  
+	    @font-face{
+    src: url(new-NotoSerifTelugu-Black.ttf);
+    font-family: "new font";
+    font-weight: 900;
+    
+    font-style: normal;
+}
+	  
+
+	  
+
+	  
+	    .old-Black{
+    font-family: "old font", "Adobe NotDef";
+    font-weight: 900.0;
+    
+    font-style: normal;
+    font-variation-settings: "wght" 900.0;
+}
+	  
+
+	  
+	    .new-Black{
+    font-family: "new font", "Adobe NotDef";
+    font-weight: 900;
+    
+    font-style: normal;
+    font-variation-settings: "wght" 900;
+}
+	  
+
+	  
+	
+.cell{
+  z-index: -100;
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 5pt;
+  margin: 5pt;
+  width: 50pt;
+  line-height: 48.0px;
+}
+.cell-word{
+  z-index: -100;
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 5pt;
+  margin: 5pt;
+  line-height: 48.0px;
+}
+.cat-strings .cell {
+  clear: both;
+  position: static;
+  float: none;
+  text-align: left;
+}
+.box-title {
+  clear: both;
+}
+
+
+	   #ot-panel {
+		max-height: 400px;
+		overflow-y: scroll;
+		background: white;
+		padding: 10px;
+		display: none;
+	   }
+    </style>
+</head>
+<body>
+    <div id="nav">
+		
+			<div class="nav-item" id="font-toggle">old</div>
+		
+			<div class="nav-item" id="ot-button">OT features</div>
+			<div id="ot-panel">
+			</div>
+		
+	</div>
+    <div id="content">
+	<h2>
+<b>Diffenator</b>
+</h2>
+	
+  
+    <div class="box">
+    <div class="box-title">Tables</div>
+     <script>var fontdiff = {"STAT": {"axis values": {"Thin": {"format": [1, null], "AxisIndex": [0, null], "Flags": [0, null], "Value": [100.0, null]}, "ExtraLight": {"format": [1, null], "AxisIndex": [0, null], "Flags": [0, null], "Value": [200.0, null]}, "Light": {"format": [1, null], "AxisIndex": [0, null], "Flags": [0, null], "Value": [300.0, null]}, "Regular": {"format": [3, null], "AxisIndex": [0, null], "Flags": [2, null], "Value": [400.0, null]}, "Medium": {"format": [1, null], "AxisIndex": [0, null], "Flags": [0, null], "Value": [500.0, null]}, "SemiBold": {"format": [1, null], "AxisIndex": [0, null], "Flags": [0, null], "Value": [600.0, null]}, "Bold": {"format": [1, null], "AxisIndex": [0, null], "Flags": [0, null], "Value": [700.0, null]}, "ExtraBold": {"format": [1, null], "AxisIndex": [0, null], "Flags": [0, null], "Value": [800.0, null]}, "Black": {"format": [1, null], "AxisIndex": [0, null], "Flags": [0, null], "Value": [900.0, null]}}, "design axis records": {"wght": {"order": [0, null], "AxisName": ["Weight", null]}}}, "OS/2": {"yStrikeoutPosition": [300, 307], "fsSelection": [192, 448], "xAvgCharWidth": [720, 766], "sxHeight": [500, 511], "panose": {"bLetterForm": [0, 2], "bStrokeVariation": [0, 5], "bFamilyType": [0, 2], "bMidline": [0, 2], "bWeight": [0, 10], "bArmStyle": [0, 5], "bXHeight": [0, 4], "bContrast": [0, 6], "bProportion": [0, 2], "bSerifStyle": [0, 2]}, "usWeightClass": [400, 900]}, "cmap": {"0x0C3C": [null, "nuktatelu"], "0x0C5D": [null, "nakaarapollutelu"], "0x00AD": ["uni00AD.telu", "sfthyphen.telu"]}, "avar": {"tableTag": ["avar", null], "segments": {"wght": {"-1.0": [-1.0, null], "-0.66668701171875": [-0.78790283203125, null], "-0.33331298828125": [-0.45452880859375, null], "0.0": [0.0, null], "0.20001220703125": [0.15997314453125, null], "0.4000244140625": [0.3599853515625, null], "0.5999755859375": [0.58001708984375, null], "0.79998779296875": [0.80999755859375, null], "1.0": [1.0, null]}}, "table": {"Version": [65536, null], "Reserved": [0, null], "AxisCount": [1, null], "AxisSegmentMap": {"0": {"PositionMapCount": [9, null], "AxisValueMap": {"0": {"FromCoordinate": [-1.0, null], "ToCoordinate": [-1.0, null]}, "1": {"FromCoordinate": [-0.66668701171875, null], "ToCoordinate": [-0.78790283203125, null]}, "2": {"FromCoordinate": [-0.33331298828125, null], "ToCoordinate": [-0.45452880859375, null]}, "3": {"FromCoordinate": [0.0, null], "ToCoordinate": [0.0, null]}, "4": {"FromCoordinate": [0.20001220703125, null], "ToCoordinate": [0.15997314453125, null]}, "5": {"FromCoordinate": [0.4000244140625, null], "ToCoordinate": [0.3599853515625, null]}, "6": {"FromCoordinate": [0.5999755859375, null], "ToCoordinate": [0.58001708984375, null]}, "7": {"FromCoordinate": [0.79998779296875, null], "ToCoordinate": [0.80999755859375, null]}, "8": {"FromCoordinate": [1.0, null], "ToCoordinate": [1.0, null]}}}}}, "majorVersion": [1, null], "minorVersion": [0, null]}, "maxp": {"maxCompositeContours": [7, 6], "maxPoints": [203, 170], "maxContours": [9, 8], "numGlyphs": [740, 743], "maxCompositePoints": [181, 157]}, "GSUB": {"table": {"LookupList": {"Lookup": {"62": {"SubTable": {"0": {"BacktrackCoverage": {"0": {"glyphs": {"582": ["uni00AD.telu", "sfthyphen.telu"]}}}}}}, "67": {"SubTable": {"0": {"BacktrackClassDef": {"classDefs": {"sfthyphen.telu": [null, 1], "uni00AD.telu": [1, null]}}}}}, "78": {"SubTable": {"0": {"BacktrackCoverage": {"0": {"glyphs": {"481": ["uni00AD.telu", "sfthyphen.telu"]}}}}}}}}}}, "post": {"extraNames": {"error": ["There are 641 changes, check manually!", ""]}}, "prep": {"tableTag": ["prep", null]}, "hmtx": {"metrics": {"error": ["There are 729 changes, check manually!", ""]}}, "gvar": {"tableTag": ["gvar", null], "version": [1, null], "reserved": [0, null], "axisCount": [1, null], "sharedTupleCount": [2, null], "offsetToSharedTuples": [2984, null], "glyphCount": [740, null], "flags": [1, null], "offsetToGlyphVariationData": [2988, null]}, "hhea": {"advanceWidthMax": [1607, 1721], "minRightSideBearing": [-194, -212], "numberOfHMetrics": [740, 743], "xMaxExtent": [1590, 1704], "minLeftSideBearing": [-1167, -1214]}, "head": {"xMax": [1590, 1704], "checkSumAdjustment": [1697697566, 1907822238], "yMin": [-477, -478], "xMin": [-1167, -1214], "fontRevision": [2.003997802734375, 2.0050048828125], "modified": [3761131451, 3778578675]}, "fvar": {"axes": {"wght": {"minValue": [100.0, null], "maxValue": [900.0, null], "defaultValue": [400.0, null], "axisName": ["Weight", null]}}, "instances": {"Thin": {"coordinates": {"wght": [100.0, null]}, "flags": [0, null]}, "ExtraLight": {"coordinates": {"wght": [200.0, null]}, "flags": [0, null]}, "Light": {"coordinates": {"wght": [300.0, null]}, "flags": [0, null]}, "Regular": {"coordinates": {"wght": [400.0, null]}, "flags": [0, null]}, "Medium": {"coordinates": {"wght": [500.0, null]}, "flags": [0, null]}, "SemiBold": {"coordinates": {"wght": [600.0, null]}, "flags": [0, null]}, "Bold": {"coordinates": {"wght": [700.0, null]}, "flags": [0, null]}, "ExtraBold": {"coordinates": {"wght": [800.0, null]}, "flags": [0, null]}, "Black": {"coordinates": {"wght": [900.0, null]}, "flags": [0, null]}}}, "GPOS": {"table": {"LookupList": {"Lookup": {"24": {"SubTable": {"0": {"BaseArray": {"BaseRecord": {"error": ["There are 239 changes, check manually!", ""]}}}}}, "25": {"SubTable": {"0": {"Mark2Array": {"Mark2Record": {"0": {"Mark2Anchor": {"0": {"Format": [3, 1], "YCoordinate": [-261, -321], "YDeviceTable": {"StartSize": [1, null], "EndSize": [0, null], "DeltaFormat": [32768, null]}}}}, "1": {"Mark2Anchor": {"0": {"Format": [3, 1], "YCoordinate": [-234, -271], "YDeviceTable": {"StartSize": [2, null], "EndSize": [255, null], "DeltaFormat": [32768, null]}, "XDeviceTable": {"StartSize": [2, null], "EndSize": [175, null], "DeltaFormat": [32768, null]}, "XCoordinate": [97, 86]}}}, "2": {"Mark2Anchor": {"0": {"Format": [3, 1], "YCoordinate": [-291, -301], "YDeviceTable": {"StartSize": [2, null], "EndSize": [260, null], "DeltaFormat": [32768, null]}}}}, "3": {"Mark2Anchor": {"0": {"Format": [3, 1], "YCoordinate": [-351, -389], "YDeviceTable": {"StartSize": [2, null], "EndSize": [266, null], "DeltaFormat": [32768, null]}, "XDeviceTable": {"StartSize": [2, null], "EndSize": [73, null], "DeltaFormat": [32768, null]}, "XCoordinate": [45, 15]}}}}}}}}, "26": {"SubTable": {"0": {"BaseArray": {"BaseRecord": {"error": ["There are 466 changes, check manually!", ""]}}, "MarkCoverage": {"glyphs": {"2": ["khasubscripttelu", "nuktatelu"], "3": ["gasubscripttelu", "khasubscripttelu"], "4": ["ghasubscripttelu", "gasubscripttelu"], "5": ["ngasubscripttelu", "ghasubscripttelu"], "6": ["jasubscripttelu", "ngasubscripttelu"], "7": ["jhasubscripttelu", "jasubscripttelu"], "8": ["nyasubscripttelu", "jhasubscripttelu"], "9": ["ttasubscripttelu", "nyasubscripttelu"], "10": ["tthasubscripttelu", "ttasubscripttelu"], "11": ["ddasubscripttelu", "tthasubscripttelu"], "12": ["ddhasubscripttelu", "ddasubscripttelu"], "13": ["nnasubscripttelu", "ddhasubscripttelu"], "14": ["tasubscripttelu", "nnasubscripttelu"], "15": ["thasubscripttelu", "tasubscripttelu"], "16": ["dasubscripttelu", "thasubscripttelu"], "17": ["dhasubscripttelu", "dasubscripttelu"], "18": ["rrasubscripttelu", "dhasubscripttelu"], "19": ["lasubscripttelu", "rrasubscripttelu"], "20": ["ssasubscripttelu", "lasubscripttelu"], "21": ["hasubscripttelu", "ssasubscripttelu"], "22": ["kassasubscripttelu", "hasubscripttelu"], "23": ["tasubscriptnarrowtelu", "kassasubscripttelu"], "24": ["tasubscriptwidetelu", "tasubscriptnarrowtelu"], "25": ["tasubscriptlowtelu", "tasubscriptwidetelu"], "26": ["tailengthmarknarrowtelu", "tasubscriptlowtelu"], "27": ["tailengthmarktelu", "tailengthmarknarrowtelu"], "28": ["tailengthmarkwidetelu", "tailengthmarktelu"], "29": ["khailengthmarktelu", "tailengthmarkwidetelu"], "30": ["gailengthmarktelu", "khailengthmarktelu"], "31": ["ghailengthmarktelu", "gailengthmarktelu"], "32": ["jailengthmarktelu", "ghailengthmarktelu"], "33": ["ttailengthmarktelu", "jailengthmarktelu"], "34": ["ddailengthmarktelu", "ttailengthmarktelu"], "35": ["nnailengthmarktelu", "ddailengthmarktelu"], "36": ["thailengthmarktelu", "nnailengthmarktelu"], "37": ["dailengthmarktelu", "thailengthmarktelu"], "38": ["dhailengthmarktelu", "dailengthmarktelu"], "39": ["lailengthmarktelu", "dhailengthmarktelu"], "40": ["ssailengthmarktelu", "lailengthmarktelu"], "41": ["hailengthmarktelu", "ssailengthmarktelu"], "42": ["tarasubscriptligtelu", "hailengthmarktelu"], "43": ["ssannasubscripttelu", "tarasubscriptligtelu"], "44": ["jasubscriptlowtelu", "ssannasubscripttelu"], "45": ["ttasubscriptlowtelu", "jasubscriptlowtelu"], "46": ["ddasubscriptlowtelu", "ttasubscriptlowtelu"], "47": ["dasubscriptlowtelu", "ddasubscriptlowtelu"], "48": ["lasubscriptlowtelu", "dasubscriptlowtelu"], "49": ["uni0951", "lasubscriptlowtelu"], "50": ["uni0952", "uni0951"], "51": ["uni1CDA", "uni0952"], "52": ["candrabindu_095telu.spacing", "uni1CDA"], "53": ["candrabindu_0952telu", "candrabindu_095telu.spacing"], "54": ["candrabindu_1CDAtelu", "candrabindu_0952telu"], "55": ["lllasubscripttelu", "candrabindu_1CDAtelu"], "56": ["rrrasubscripttelu", "lllasubscripttelu"], "57": [null, "rrrasubscripttelu"], "58": [null, "nuktaailengthmarktelu"]}}, "MarkArray": {"MarkRecord": {"1": {"MarkAnchor": {"Format": [3, 1], "YCoordinate": [-317, -326], "YDeviceTable": {"StartSize": [1, null], "EndSize": [7, null], "DeltaFormat": [32768, null]}}}, "2": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [171, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-263, 0]}}, "3": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [237, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-207, -265]}}, "4": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [227, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-326, -222]}}, "5": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [176, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-254, -330]}}, "6": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [176, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-254, -263]}}, "7": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [236, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-327, -263]}}, "8": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [203, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-324, -343]}}, "9": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [154, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-261, -336]}}, "10": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [206, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-209, -287]}}, "11": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [167, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-254, -216]}}, "12": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [167, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-254, -261]}}, "13": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [168, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-288, -261]}}, "14": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [204, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-285, -294]}}, "15": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [161, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-241, -296]}}, "16": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [161, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-241, -249]}}, "17": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [161, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-241, -249]}}, "18": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [178, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-280, -249]}}, "19": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [216, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-274, -285]}}, "20": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [163, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-262, -278]}}, "21": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [232, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-343, -261]}}, "22": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [234, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-192, -366]}}, "23": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [243, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-250, -211]}}, "24": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [245, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-356, -259]}}, "25": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [204, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-285, -352]}}, "26": {"MarkAnchor": {"XCoordinate": [-241, -296]}}, "27": {"MarkAnchor": {"XCoordinate": [-302, -241]}}, "28": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [16, null], "DeltaFormat": [32768, null]}}}, "29": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [265, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-276, -342]}}, "30": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [226, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-269, -270]}}, "31": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [144, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-283, -274]}}, "32": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [141, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-269, -279]}}, "33": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [122, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-269, -275]}}, "34": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [151, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-270, -275]}}, "35": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [156, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-269, -275]}}, "36": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [150, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-269, -275]}}, "37": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [150, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-269, -275]}}, "38": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [150, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-269, -275]}}, "39": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [150, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-269, -275]}}, "40": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [247, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-277, -275]}}, "41": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [133, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-268, -279]}}, "42": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [213, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-328, -265]}}, "43": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [241, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-241, -344]}}, "44": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [176, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-254, -268]}}, "45": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [154, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-261, -263]}}, "46": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [167, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-254, -287]}}, "47": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [161, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-241, -261]}}, "48": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [240, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-274, -249]}}, "49": {"MarkAnchor": {"YCoordinate": [-317, -24], "XCoordinate": [-286, -278]}}, "50": {"MarkAnchor": {"YCoordinate": [439, -317]}}, "51": {"MarkAnchor": {"YCoordinate": [-317, 439]}}, "53": {"MarkAnchor": {"YCoordinate": [439, -317]}}, "54": {"MarkAnchor": {"YCoordinate": [-317, 439]}}, "55": {"MarkAnchor": {"Format": [3, 1], "YCoordinate": [-24, -317], "XDeviceTable": {"StartSize": [2, null], "EndSize": [169, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-280, -286]}}, "56": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [167, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-242, -285]}}, "57": {"Class": [null, 0], "MarkAnchor": {"Format": [null, 1], "XCoordinate": [null, -249], "YCoordinate": [null, -24]}}, "58": {"Class": [null, 0], "MarkAnchor": {"Format": [null, 1], "XCoordinate": [null, -275], "YCoordinate": [null, -24]}}}, "MarkCount": [57, 59]}}}}, "27": {"SubTable": {"0": {"Mark1Coverage": {"glyphs": {"2": ["khasubscripttelu", "nuktatelu"], "3": ["gasubscripttelu", "khasubscripttelu"], "4": ["ghasubscripttelu", "gasubscripttelu"], "5": ["ngasubscripttelu", "ghasubscripttelu"], "6": ["jasubscripttelu", "ngasubscripttelu"], "7": ["jhasubscripttelu", "jasubscripttelu"], "8": ["nyasubscripttelu", "jhasubscripttelu"], "9": ["ttasubscripttelu", "nyasubscripttelu"], "10": ["tthasubscripttelu", "ttasubscripttelu"], "11": ["ddasubscripttelu", "tthasubscripttelu"], "12": ["ddhasubscripttelu", "ddasubscripttelu"], "13": ["nnasubscripttelu", "ddhasubscripttelu"], "14": ["tasubscripttelu", "nnasubscripttelu"], "15": ["thasubscripttelu", "tasubscripttelu"], "16": ["dasubscripttelu", "thasubscripttelu"], "17": ["dhasubscripttelu", "dasubscripttelu"], "18": ["rrasubscripttelu", "dhasubscripttelu"], "19": ["lasubscripttelu", "rrasubscripttelu"], "20": ["ssasubscripttelu", "lasubscripttelu"], "21": ["hasubscripttelu", "ssasubscripttelu"], "22": ["kassasubscripttelu", "hasubscripttelu"], "23": ["tasubscriptnarrowtelu", "kassasubscripttelu"], "24": ["tasubscriptwidetelu", "tasubscriptnarrowtelu"], "25": ["tasubscriptlowtelu", "tasubscriptwidetelu"], "26": ["tailengthmarknarrowtelu", "tasubscriptlowtelu"], "27": ["tailengthmarktelu", "tailengthmarknarrowtelu"], "28": ["tailengthmarkwidetelu", "tailengthmarktelu"], "29": ["khailengthmarktelu", "tailengthmarkwidetelu"], "30": ["gailengthmarktelu", "khailengthmarktelu"], "31": ["ghailengthmarktelu", "gailengthmarktelu"], "32": ["jailengthmarktelu", "ghailengthmarktelu"], "33": ["ttailengthmarktelu", "jailengthmarktelu"], "34": ["ddailengthmarktelu", "ttailengthmarktelu"], "35": ["nnailengthmarktelu", "ddailengthmarktelu"], "36": ["thailengthmarktelu", "nnailengthmarktelu"], "37": ["dailengthmarktelu", "thailengthmarktelu"], "38": ["dhailengthmarktelu", "dailengthmarktelu"], "39": ["lailengthmarktelu", "dhailengthmarktelu"], "40": ["ssailengthmarktelu", "lailengthmarktelu"], "41": ["hailengthmarktelu", "ssailengthmarktelu"], "42": ["tarasubscriptligtelu", "hailengthmarktelu"], "43": ["ssannasubscripttelu", "tarasubscriptligtelu"], "44": ["jasubscriptlowtelu", "ssannasubscripttelu"], "45": ["ttasubscriptlowtelu", "jasubscriptlowtelu"], "46": ["ddasubscriptlowtelu", "ttasubscriptlowtelu"], "47": ["dasubscriptlowtelu", "ddasubscriptlowtelu"], "48": ["lasubscriptlowtelu", "dasubscriptlowtelu"], "49": ["uni0951", "lasubscriptlowtelu"], "50": ["uni0952", "uni0951"], "51": ["uni1CDA", "uni0952"], "52": ["candrabindu_095telu.spacing", "uni1CDA"], "53": ["candrabindu_0952telu", "candrabindu_095telu.spacing"], "54": ["candrabindu_1CDAtelu", "candrabindu_0952telu"], "55": ["lllasubscripttelu", "candrabindu_1CDAtelu"], "56": ["rrrasubscripttelu", "lllasubscripttelu"], "57": [null, "rrrasubscripttelu"], "58": [null, "nuktaailengthmarktelu"]}}, "Mark2Array": {"Mark2Record": {"1": {"Mark2Anchor": {"0": {"Format": [3, 1], "YCoordinate": [-280, -297], "YDeviceTable": {"StartSize": [2, null], "EndSize": [235, null], "DeltaFormat": [32768, null]}, "XDeviceTable": {"StartSize": [2, null], "EndSize": [17, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-96, -75]}}}, "2": {"Mark2Anchor": {"0": {"Format": [3, 1], "YCoordinate": [-239, -264], "YDeviceTable": {"StartSize": [2, null], "EndSize": [121, null], "DeltaFormat": [32768, null]}, "XDeviceTable": {"StartSize": [2, null], "EndSize": [212, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-97, -94]}}}, "3": {"Mark2Anchor": {"0": {"Format": [3, 1], "YCoordinate": [-219, -249], "YDeviceTable": {"StartSize": [2, null], "EndSize": [250, null], "DeltaFormat": [32768, null]}, "XDeviceTable": {"StartSize": [1, null], "EndSize": [21, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-84, -74]}}}, "4": {"Mark2Anchor": {"0": {"Format": [3, 1], "YCoordinate": [-289, -335], "YDeviceTable": {"StartSize": [2, null], "EndSize": [222, null], "DeltaFormat": [32768, null]}, "XDeviceTable": {"StartSize": [2, null], "EndSize": [86, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-84, -67]}}}}}, "Mark1Array": {"MarkRecord": {"1": {"MarkAnchor": {"Format": [3, 1], "YCoordinate": [-317, -326], "YDeviceTable": {"StartSize": [1, null], "EndSize": [7, null], "DeltaFormat": [32768, null]}}}, "2": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [171, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-263, 0]}}, "3": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [237, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-207, -265]}}, "4": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [227, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-326, -222]}}, "5": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [176, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-254, -330]}}, "6": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [176, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-254, -263]}}, "7": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [236, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-327, -263]}}, "8": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [203, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-324, -343]}}, "9": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [154, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-261, -336]}}, "10": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [206, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-209, -287]}}, "11": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [167, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-254, -216]}}, "12": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [167, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-254, -261]}}, "13": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [168, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-288, -261]}}, "14": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [204, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-285, -294]}}, "15": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [161, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-241, -296]}}, "16": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [161, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-241, -249]}}, "17": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [161, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-241, -249]}}, "18": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [178, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-280, -249]}}, "19": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [216, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-274, -285]}}, "20": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [163, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-262, -278]}}, "21": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [232, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-343, -261]}}, "22": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [234, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-192, -366]}}, "23": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [243, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-250, -211]}}, "24": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [245, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-356, -259]}}, "25": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [204, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-285, -352]}}, "26": {"MarkAnchor": {"XCoordinate": [-241, -296]}}, "27": {"MarkAnchor": {"XCoordinate": [-302, -241]}}, "28": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [16, null], "DeltaFormat": [32768, null]}}}, "29": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [265, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-276, -342]}}, "30": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [226, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-269, -270]}}, "31": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [144, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-283, -274]}}, "32": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [141, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-269, -279]}}, "33": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [122, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-269, -275]}}, "34": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [151, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-270, -275]}}, "35": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [156, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-269, -275]}}, "36": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [150, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-269, -275]}}, "37": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [150, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-269, -275]}}, "38": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [150, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-269, -275]}}, "39": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [150, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-269, -275]}}, "40": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [247, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-277, -275]}}, "41": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [133, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-268, -279]}}, "42": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [213, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-328, -265]}}, "43": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [241, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-241, -344]}}, "44": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [176, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-254, -268]}}, "45": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [154, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-261, -263]}}, "46": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [167, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-254, -287]}}, "47": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [161, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-241, -261]}}, "48": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [240, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-274, -249]}}, "49": {"MarkAnchor": {"YCoordinate": [-317, -24], "XCoordinate": [-286, -278]}}, "50": {"MarkAnchor": {"YCoordinate": [439, -317]}}, "51": {"MarkAnchor": {"YCoordinate": [-317, 439]}}, "53": {"MarkAnchor": {"YCoordinate": [439, -317]}}, "54": {"MarkAnchor": {"YCoordinate": [-317, 439]}}, "55": {"MarkAnchor": {"Format": [3, 1], "YCoordinate": [-24, -317], "XDeviceTable": {"StartSize": [2, null], "EndSize": [169, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-280, -286]}}, "56": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [167, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-242, -285]}}, "57": {"Class": [null, 0], "MarkAnchor": {"Format": [null, 1], "XCoordinate": [null, -249], "YCoordinate": [null, -24]}}, "58": {"Class": [null, 0], "MarkAnchor": {"Format": [null, 1], "XCoordinate": [null, -275], "YCoordinate": [null, -24]}}}, "MarkCount": [57, 59]}}}}, "28": {"SubTable": {"0": {"Coverage": {"glyphs": {"error": ["There are 352 changes, check manually!", ""]}}, "PairSetCount": [389, 390], "PairSet": {"error": ["There are 390 changes, check manually!", ""]}, "ValueFormat1": [68, 4]}}}, "29": {"SubTable": {"0": {"Coverage": {"glyphs": {"error": ["There are 153 changes, check manually!", ""]}}, "PairSetCount": [398, 298], "PairSet": {"error": ["There are 391 changes, check manually!", ""]}, "ValueFormat1": [68, 4]}}}, "34": {"SubTable": {"0": {"BaseArray": {"BaseRecord": {"0": {"BaseAnchor": {"0": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [187, null], "DeltaFormat": [32768, null]}, "XCoordinate": [280, 275]}, "1": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [239, null], "DeltaFormat": [32768, null]}, "XCoordinate": [506, 495]}}}}}, "MarkCoverage": {"glyphs": {"2": ["khasubscripttelu", "nuktatelu"], "3": ["gasubscripttelu", "khasubscripttelu"], "4": ["ghasubscripttelu", "gasubscripttelu"], "5": ["ngasubscripttelu", "ghasubscripttelu"], "6": ["jasubscripttelu", "ngasubscripttelu"], "7": ["jhasubscripttelu", "jasubscripttelu"], "8": ["nyasubscripttelu", "jhasubscripttelu"], "9": ["ttasubscripttelu", "nyasubscripttelu"], "10": ["tthasubscripttelu", "ttasubscripttelu"], "11": ["ddasubscripttelu", "tthasubscripttelu"], "12": ["ddhasubscripttelu", "ddasubscripttelu"], "13": ["nnasubscripttelu", "ddhasubscripttelu"], "14": ["tasubscripttelu", "nnasubscripttelu"], "15": ["thasubscripttelu", "tasubscripttelu"], "16": ["dasubscripttelu", "thasubscripttelu"], "17": ["dhasubscripttelu", "dasubscripttelu"], "18": ["rrasubscripttelu", "dhasubscripttelu"], "19": ["lasubscripttelu", "rrasubscripttelu"], "20": ["ssasubscripttelu", "lasubscripttelu"], "21": ["hasubscripttelu", "ssasubscripttelu"], "22": ["kassasubscripttelu", "hasubscripttelu"], "23": ["karasubscripttelu", "kassasubscripttelu"], "24": ["kharasubscripttelu", "karasubscripttelu"], "25": ["garasubscripttelu", "kharasubscripttelu"], "26": ["gharasubscripttelu", "garasubscripttelu"], "27": ["ngarasubscripttelu", "gharasubscripttelu"], "28": ["carasubscripttelu", "ngarasubscripttelu"], "29": ["charasubscripttelu", "carasubscripttelu"], "30": ["jarasubscripttelu", "charasubscripttelu"], "31": ["jharasubscripttelu", "jarasubscripttelu"], "32": ["nyarasubscripttelu", "jharasubscripttelu"], "33": ["ttarasubscripttelu", "nyarasubscripttelu"], "34": ["ttharasubscripttelu", "ttarasubscripttelu"], "35": ["ddarasubscripttelu", "ttharasubscripttelu"], "36": ["ddharasubscripttelu", "ddarasubscripttelu"], "37": ["nnarasubscripttelu", "ddharasubscripttelu"], "38": ["tarasubscripttelu", "nnarasubscripttelu"], "39": ["tharasubscripttelu", "tarasubscripttelu"], "40": ["darasubscripttelu", "tharasubscripttelu"], "41": ["dharasubscripttelu", "darasubscripttelu"], "42": ["narasubscripttelu", "dharasubscripttelu"], "43": ["parasubscripttelu", "narasubscripttelu"], "44": ["pharasubscripttelu", "parasubscripttelu"], "45": ["barasubscripttelu", "pharasubscripttelu"], "46": ["bharasubscripttelu", "barasubscripttelu"], "47": ["marasubscripttelu", "bharasubscripttelu"], "48": ["yarasubscripttelu", "marasubscripttelu"], "49": ["rarasubscripttelu", "yarasubscripttelu"], "50": ["rrarasubscripttelu", "rarasubscripttelu"], "51": ["larasubscripttelu", "rrarasubscripttelu"], "52": ["llarasubscripttelu", "larasubscripttelu"], "53": ["varasubscripttelu", "llarasubscripttelu"], "54": ["sharasubscripttelu", "varasubscripttelu"], "55": ["ssarasubscripttelu", "sharasubscripttelu"], "56": ["sarasubscripttelu", "ssarasubscripttelu"], "57": ["harasubscripttelu", "sarasubscripttelu"], "58": ["rasubscriptlowtelu", "harasubscripttelu"], "59": ["tasubscriptnarrowtelu", "rasubscriptlowtelu"], "60": ["tasubscriptwidetelu", "tasubscriptnarrowtelu"], "61": ["tasubscriptlowtelu", "tasubscriptwidetelu"], "62": ["tailengthmarknarrowtelu", "tasubscriptlowtelu"], "63": ["tailengthmarktelu", "tailengthmarknarrowtelu"], "64": ["tailengthmarkwidetelu", "tailengthmarktelu"], "65": ["khailengthmarktelu", "tailengthmarkwidetelu"], "66": ["gailengthmarktelu", "khailengthmarktelu"], "67": ["ghailengthmarktelu", "gailengthmarktelu"], "68": ["jailengthmarktelu", "ghailengthmarktelu"], "69": ["ttailengthmarktelu", "jailengthmarktelu"], "70": ["ddailengthmarktelu", "ttailengthmarktelu"], "71": ["nnailengthmarktelu", "ddailengthmarktelu"], "72": ["thailengthmarktelu", "nnailengthmarktelu"], "73": ["dailengthmarktelu", "thailengthmarktelu"], "74": ["dhailengthmarktelu", "dailengthmarktelu"], "75": ["lailengthmarktelu", "dhailengthmarktelu"], "76": ["ssailengthmarktelu", "lailengthmarktelu"], "77": ["hailengthmarktelu", "ssailengthmarktelu"], "78": ["tarasubscriptligtelu", "hailengthmarktelu"], "79": ["ssannasubscripttelu", "tarasubscriptligtelu"], "80": ["jasubscriptlowtelu", "ssannasubscripttelu"], "81": ["ttasubscriptlowtelu", "jasubscriptlowtelu"], "82": ["ddasubscriptlowtelu", "ttasubscriptlowtelu"], "83": ["dasubscriptlowtelu", "ddasubscriptlowtelu"], "84": ["lasubscriptlowtelu", "dasubscriptlowtelu"], "85": ["uni0951", "lasubscriptlowtelu"], "86": ["uni0952", "uni0951"], "87": ["uni1CDA", "uni0952"], "88": ["candrabindu_095telu.spacing", "uni1CDA"], "89": ["candrabindu_0952telu", "candrabindu_095telu.spacing"], "90": ["candrabindu_1CDAtelu", "candrabindu_0952telu"], "91": ["lllasubscripttelu", "candrabindu_1CDAtelu"], "92": ["lllarasubscripttelu", "lllasubscripttelu"], "93": ["rrrasubscripttelu", "lllarasubscripttelu"], "94": ["rrrarasubscripttelu", "rrrasubscripttelu"], "95": [null, "rrrarasubscripttelu"], "96": [null, "nuktaailengthmarktelu"]}}, "MarkArray": {"MarkRecord": {"1": {"MarkAnchor": {"Format": [3, 1], "YCoordinate": [-317, -326], "YDeviceTable": {"StartSize": [1, null], "EndSize": [7, null], "DeltaFormat": [32768, null]}}}, "2": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [171, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-263, 0]}}, "3": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [237, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-207, -265]}}, "4": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [227, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-326, -222]}}, "5": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [176, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-254, -330]}}, "6": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [176, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-254, -263]}}, "7": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [236, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-327, -263]}}, "8": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [203, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-324, -343]}}, "9": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [154, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-261, -336]}}, "10": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [206, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-209, -287]}}, "11": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [167, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-254, -216]}}, "12": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [167, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-254, -261]}}, "13": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [168, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-288, -261]}}, "14": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [204, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-285, -294]}}, "15": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [161, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-241, -296]}}, "16": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [161, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-241, -249]}}, "17": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [161, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-241, -249]}}, "18": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [178, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-280, -249]}}, "19": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [216, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-274, -285]}}, "20": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [163, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-262, -278]}}, "21": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [232, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-343, -261]}}, "22": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [234, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-192, -366]}}, "23": {"MarkAnchor": {"XCoordinate": [0, -211]}, "Class": [1, 0]}, "59": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [243, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-250, 0]}, "Class": [0, 1]}, "60": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [245, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-356, -259]}}, "61": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [204, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-285, -352]}}, "62": {"MarkAnchor": {"XCoordinate": [-241, -296]}}, "63": {"MarkAnchor": {"XCoordinate": [-302, -241]}}, "64": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [16, null], "DeltaFormat": [32768, null]}}}, "65": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [265, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-276, -342]}}, "66": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [226, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-269, -270]}}, "67": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [144, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-283, -274]}}, "68": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [141, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-269, -279]}}, "69": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [122, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-269, -275]}}, "70": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [151, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-270, -275]}}, "71": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [156, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-269, -275]}}, "72": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [150, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-269, -275]}}, "73": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [150, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-269, -275]}}, "74": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [150, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-269, -275]}}, "75": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [150, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-269, -275]}}, "76": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [247, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-277, -275]}}, "77": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [133, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-268, -279]}}, "78": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [213, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-328, -265]}}, "79": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [241, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-241, -344]}}, "80": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [176, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-254, -268]}}, "81": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [154, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-261, -263]}}, "82": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [167, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-254, -287]}}, "83": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [161, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-241, -261]}}, "84": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [240, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-274, -249]}}, "85": {"MarkAnchor": {"YCoordinate": [-317, -24], "XCoordinate": [-286, -278]}}, "86": {"MarkAnchor": {"YCoordinate": [439, -317]}}, "87": {"MarkAnchor": {"YCoordinate": [-317, 439]}}, "89": {"MarkAnchor": {"YCoordinate": [439, -317]}}, "90": {"MarkAnchor": {"YCoordinate": [-317, 439]}}, "91": {"MarkAnchor": {"Format": [3, 1], "YCoordinate": [-24, -317], "XDeviceTable": {"StartSize": [2, null], "EndSize": [169, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-280, -286]}}, "92": {"MarkAnchor": {"XCoordinate": [0, -285]}, "Class": [1, 0]}, "93": {"MarkAnchor": {"Format": [3, 1], "XDeviceTable": {"StartSize": [2, null], "EndSize": [167, null], "DeltaFormat": [32768, null]}, "XCoordinate": [-242, 0]}, "Class": [0, 1]}, "94": {"MarkAnchor": {"XCoordinate": [0, -249]}, "Class": [1, 0]}, "95": {"Class": [null, 1], "MarkAnchor": {"Format": [null, 1], "XCoordinate": [null, 0], "YCoordinate": [null, -24]}}, "96": {"Class": [null, 0], "MarkAnchor": {"Format": [null, 1], "XCoordinate": [null, -275], "YCoordinate": [null, -24]}}}, "MarkCount": [95, 97]}}}}}}}}, "glyf": {"glyphOrder": {"error": ["There are 641 changes, check manually!", ""]}, "axisTags": {"0": ["wght", null]}}, "GDEF": {"table": {"Version": [65539, 65538], "MarkGlyphSetsDef": {"Coverage": {"1": {"glyphs": {"2": ["khasubscripttelu", "nuktatelu"], "3": ["gasubscripttelu", "khasubscripttelu"], "4": ["ghasubscripttelu", "gasubscripttelu"], "5": ["ngasubscripttelu", "ghasubscripttelu"], "6": ["jasubscripttelu", "ngasubscripttelu"], "7": ["jhasubscripttelu", "jasubscripttelu"], "8": ["nyasubscripttelu", "jhasubscripttelu"], "9": ["ttasubscripttelu", "nyasubscripttelu"], "10": ["tthasubscripttelu", "ttasubscripttelu"], "11": ["ddasubscripttelu", "tthasubscripttelu"], "12": ["ddhasubscripttelu", "ddasubscripttelu"], "13": ["nnasubscripttelu", "ddhasubscripttelu"], "14": ["tasubscripttelu", "nnasubscripttelu"], "15": ["thasubscripttelu", "tasubscripttelu"], "16": ["dasubscripttelu", "thasubscripttelu"], "17": ["dhasubscripttelu", "dasubscripttelu"], "18": ["rrasubscripttelu", "dhasubscripttelu"], "19": ["lasubscripttelu", "rrasubscripttelu"], "20": ["ssasubscripttelu", "lasubscripttelu"], "21": ["hasubscripttelu", "ssasubscripttelu"], "22": ["kassasubscripttelu", "hasubscripttelu"], "23": ["tasubscriptnarrowtelu", "kassasubscripttelu"], "24": ["tasubscriptwidetelu", "tasubscriptnarrowtelu"], "25": ["tasubscriptlowtelu", "tasubscriptwidetelu"], "26": ["tailengthmarknarrowtelu", "tasubscriptlowtelu"], "27": ["tailengthmarktelu", "tailengthmarknarrowtelu"], "28": ["tailengthmarkwidetelu", "tailengthmarktelu"], "29": ["khailengthmarktelu", "tailengthmarkwidetelu"], "30": ["gailengthmarktelu", "khailengthmarktelu"], "31": ["ghailengthmarktelu", "gailengthmarktelu"], "32": ["jailengthmarktelu", "ghailengthmarktelu"], "33": ["ttailengthmarktelu", "jailengthmarktelu"], "34": ["ddailengthmarktelu", "ttailengthmarktelu"], "35": ["nnailengthmarktelu", "ddailengthmarktelu"], "36": ["thailengthmarktelu", "nnailengthmarktelu"], "37": ["dailengthmarktelu", "thailengthmarktelu"], "38": ["dhailengthmarktelu", "dailengthmarktelu"], "39": ["lailengthmarktelu", "dhailengthmarktelu"], "40": ["ssailengthmarktelu", "lailengthmarktelu"], "41": ["hailengthmarktelu", "ssailengthmarktelu"], "42": ["tarasubscriptligtelu", "hailengthmarktelu"], "43": ["ssannasubscripttelu", "tarasubscriptligtelu"], "44": ["jasubscriptlowtelu", "ssannasubscripttelu"], "45": ["ttasubscriptlowtelu", "jasubscriptlowtelu"], "46": ["ddasubscriptlowtelu", "ttasubscriptlowtelu"], "47": ["dasubscriptlowtelu", "ddasubscriptlowtelu"], "48": ["lasubscriptlowtelu", "dasubscriptlowtelu"], "49": ["uni0951", "lasubscriptlowtelu"], "50": ["uni0952", "uni0951"], "51": ["uni1CDA", "uni0952"], "52": ["candrabindu_095telu.spacing", "uni1CDA"], "53": ["candrabindu_0952telu", "candrabindu_095telu.spacing"], "54": ["candrabindu_1CDAtelu", "candrabindu_0952telu"], "55": ["lllasubscripttelu", "candrabindu_1CDAtelu"], "56": ["rrrasubscripttelu", "lllasubscripttelu"], "57": [null, "rrrasubscripttelu"]}}}}, "GlyphClassDef": {"classDefs": {"nuktaailengthmarktelu": [null, 3], "nuktatelu": [null, 3]}}, "VarStore": {"Format": [1, null], "VarRegionList": {"RegionAxisCount": [1, null], "RegionCount": [2, null], "Region": {"0": {"VarRegionAxis": {"0": {"StartCoord": [-1.0, null], "PeakCoord": [-1.0, null], "EndCoord": [0.0, null]}}}, "1": {"VarRegionAxis": {"0": {"StartCoord": [0.0, null], "PeakCoord": [1.0, null], "EndCoord": [1.0, null]}}}}}, "VarDataCount": [3, null], "VarData": {"0": {"ItemCount": [28, null], "NumShorts": [0, null], "VarRegionCount": [1, null], "VarRegionIndex": {"0": [0, null]}, "Item": {"0": {"0": [-40, null]}, "1": {"0": [-30, null]}, "2": {"0": [-28, null]}, "3": {"0": [-26, null]}, "4": {"0": [-21, null]}, "5": {"0": [-20, null]}, "6": {"0": [-15, null]}, "7": {"0": [-14, null]}, "8": {"0": [-13, null]}, "9": {"0": [-12, null]}, "10": {"0": [-10, null]}, "11": {"0": [-9, null]}, "12": {"0": [-8, null]}, "13": {"0": [-7, null]}, "14": {"0": [-6, null]}, "15": {"0": [-5, null]}, "16": {"0": [-4, null]}, "17": {"0": [-3, null]}, "18": {"0": [-2, null]}, "19": {"0": [1, null]}, "20": {"0": [2, null]}, "21": {"0": [3, null]}, "22": {"0": [4, null]}, "23": {"0": [5, null]}, "24": {"0": [7, null]}, "25": {"0": [10, null]}, "26": {"0": [12, null]}, "27": {"0": [20, null]}}}, "1": {"ItemCount": [24, null], "NumShorts": [0, null], "VarRegionCount": [1, null], "VarRegionIndex": {"0": [1, null]}, "Item": {"0": {"0": [-60, null]}, "1": {"0": [-20, null]}, "2": {"0": [-19, null]}, "3": {"0": [-16, null]}, "4": {"0": [-14, null]}, "5": {"0": [-12, null]}, "6": {"0": [-10, null]}, "7": {"0": [-9, null]}, "8": {"0": [-7, null]}, "9": {"0": [-6, null]}, "10": {"0": [-5, null]}, "11": {"0": [-4, null]}, "12": {"0": [-3, null]}, "13": {"0": [-2, null]}, "14": {"0": [-1, null]}, "15": {"0": [1, null]}, "16": {"0": [2, null]}, "17": {"0": [3, null]}, "18": {"0": [4, null]}, "19": {"0": [5, null]}, "20": {"0": [9, null]}, "21": {"0": [10, null]}, "22": {"0": [11, null]}, "23": {"0": [12, null]}}}, "2": {"ItemCount": [267, null], "NumShorts": [0, null], "VarRegionCount": [2, null], "VarRegionIndex": {"0": [0, null], "1": [1, null]}, "Item": {"error": ["There are 267 changes, check manually!", ""]}}}}}}, "HVAR": {"tableTag": ["HVAR", null], "table": {"Version": [65536, null], "VarStore": {"Format": [1, null], "VarRegionList": {"RegionAxisCount": [1, null], "RegionCount": [2, null], "Region": {"0": {"VarRegionAxis": {"0": {"StartCoord": [-1.0, null], "PeakCoord": [-1.0, null], "EndCoord": [0.0, null]}}}, "1": {"VarRegionAxis": {"0": {"StartCoord": [0.0, null], "PeakCoord": [1.0, null], "EndCoord": [1.0, null]}}}}}, "VarDataCount": [2, null], "VarData": {"0": {"ItemCount": [225, null], "NumShorts": [0, null], "VarRegionCount": [2, null], "VarRegionIndex": {"0": [0, null], "1": [1, null]}, "Item": {"error": ["There are 225 changes, check manually!", ""]}}, "1": {"ItemCount": [7, null], "NumShorts": [2, null], "VarRegionCount": [2, null], "VarRegionIndex": {"0": [0, null], "1": [1, null]}, "Item": {"0": {"0": [-300, null], "1": [168, null]}, "1": {"0": [-190, null], "1": [93, null]}, "2": {"0": [-55, null], "1": [168, null]}, "3": {"0": [-53, null], "1": [0, null]}, "4": {"0": [0, null], "1": [0, null]}, "5": {"0": [0, null], "1": [3, null]}, "6": {"0": [0, null], "1": [19, null]}}}}}, "AdvWidthMap": {"mapping": {"error": ["There are 740 changes, check manually!", ""]}}}}, "gasp": {"tableTag": ["gasp", null], "version": [1, null], "gaspRange": {"65535": [15, null]}}, "name": {"271/1/0/0": ["SemiBold", null], "4/3/1/1033": ["Noto Serif Telugu Regular", "Noto Serif Telugu Black"], "6/3/1/1033": ["NotoSerifTelugu-Regular", "NotoSerifTelugu-Black"], "256/3/1/1033": ["Weight", null], "1/3/1/1033": ["Noto Serif Telugu", "Noto Serif Telugu Black"], "273/1/0/0": ["ExtraBold", null], "272/3/1/1033": ["Bold", null], "266/3/1/1033": ["Thin", null], "274/1/0/0": ["Black", null], "261/3/1/1033": ["Medium", null], "262/3/1/1033": ["SemiBold", null], "3/3/1/1033": ["2.004;GOOG;NotoSerifTelugu-Regular", "2.005;GOOG;NotoSerifTelugu-Black"], "17/3/1/1033": [null, "Black"], "271/3/1/1033": ["SemiBold", null], "258/3/1/1033": ["ExtraLight", null], "270/1/0/0": ["Medium", null], "268/1/0/0": ["Light", null], "267/1/0/0": ["ExtraLight", null], "257/3/1/1033": ["Thin", null], "269/1/0/0": ["Regular", null], "272/1/0/0": ["Bold", null], "5/3/1/1033": ["Version 2.004", "Version 2.005"], "267/3/1/1033": ["ExtraLight", null], "16/3/1/1033": [null, "Noto Serif Telugu"], "264/3/1/1033": ["ExtraBold", null], "265/3/1/1033": ["Black", null], "274/3/1/1033": ["Black", null], "273/3/1/1033": ["ExtraBold", null], "25/3/1/1033": ["NotoSerifTelugu", null], "268/3/1/1033": ["Light", null], "259/3/1/1033": ["Light", null], "263/3/1/1033": ["Bold", null], "270/3/1/1033": ["Medium", null], "269/3/1/1033": ["Regular", null], "266/1/0/0": ["Thin", null]}};</script><div id="difftable"></div>
+    </div>
+    
+    
+      <div class="box">
+        <div class="box-title">New encoded glyphs</div>
+        <div class="box-text old-Black" style="font-size: 32pt">
+          
+            <div class="cell">
+              <div class="cell-word">
+    <div class="tooltip">
+        ఼<br>
+        <span class="tooltiptext">
+            name: TELUGU SIGN NUKTA<br>
+            unicode: U+0C3C
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word">
+    <div class="tooltip">
+        ౝ<br>
+        <span class="tooltiptext">
+            name: TELUGU LETTER NAKAARA POLLU<br>
+            unicode: U+0C5D
+        </span>
+    </div>
+</div>
+            </div>
+          
+          </div>
+      </div>
+    
+    
+    
+    
+    
+    
+      <div class="box">
+        <div class="box-title">Modified encoded Glyphs</div>
+        <div class="box-text old-Black" style="font-size: 32pt">
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        య<br>
+        <span class="tooltiptext">
+            name: TELUGU LETTER YA<br>
+            unicode: U+0C2F<br>
+            changed pixels: 1.45%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ఓ<br>
+        <span class="tooltiptext">
+            name: TELUGU LETTER OO<br>
+            unicode: U+0C13<br>
+            changed pixels: 1.41%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        )<br>
+        <span class="tooltiptext">
+            name: RIGHT PARENTHESIS<br>
+            unicode: U+0029<br>
+            changed pixels: 1.39%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ౙ<br>
+        <span class="tooltiptext">
+            name: TELUGU LETTER DZA<br>
+            unicode: U+0C59<br>
+            changed pixels: 1.32%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ట<br>
+        <span class="tooltiptext">
+            name: TELUGU LETTER TTA<br>
+            unicode: U+0C1F<br>
+            changed pixels: 1.29%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ఝ<br>
+        <span class="tooltiptext">
+            name: TELUGU LETTER JHA<br>
+            unicode: U+0C1D<br>
+            changed pixels: 1.22%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        జ<br>
+        <span class="tooltiptext">
+            name: TELUGU LETTER JA<br>
+            unicode: U+0C1C<br>
+            changed pixels: 1.17%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        గ<br>
+        <span class="tooltiptext">
+            name: TELUGU LETTER GA<br>
+            unicode: U+0C17<br>
+            changed pixels: 1.13%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ఢ<br>
+        <span class="tooltiptext">
+            name: TELUGU LETTER DDHA<br>
+            unicode: U+0C22<br>
+            changed pixels: 1.10%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        డ<br>
+        <span class="tooltiptext">
+            name: TELUGU LETTER DDA<br>
+            unicode: U+0C21<br>
+            changed pixels: 1.10%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ఇ<br>
+        <span class="tooltiptext">
+            name: TELUGU LETTER I<br>
+            unicode: U+0C07<br>
+            changed pixels: 1.08%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        (<br>
+        <span class="tooltiptext">
+            name: LEFT PARENTHESIS<br>
+            unicode: U+0028<br>
+            changed pixels: 1.08%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        9<br>
+        <span class="tooltiptext">
+            name: DIGIT NINE<br>
+            unicode: U+0039<br>
+            changed pixels: 1.06%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ౘ<br>
+        <span class="tooltiptext">
+            name: TELUGU LETTER TSA<br>
+            unicode: U+0C58<br>
+            changed pixels: 1.06%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ౦<br>
+        <span class="tooltiptext">
+            name: TELUGU DIGIT ZERO<br>
+            unicode: U+0C66<br>
+            changed pixels: 1.04%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ౷<br>
+        <span class="tooltiptext">
+            name: TELUGU SIGN SIDDHAM<br>
+            unicode: U+0C77<br>
+            changed pixels: 1.04%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ఉ<br>
+        <span class="tooltiptext">
+            name: TELUGU LETTER U<br>
+            unicode: U+0C09<br>
+            changed pixels: 1.03%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ఙ<br>
+        <span class="tooltiptext">
+            name: TELUGU LETTER NGA<br>
+            unicode: U+0C19<br>
+            changed pixels: 1.01%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        శ<br>
+        <span class="tooltiptext">
+            name: TELUGU LETTER SHA<br>
+            unicode: U+0C36<br>
+            changed pixels: 1.00%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ఐ<br>
+        <span class="tooltiptext">
+            name: TELUGU LETTER AI<br>
+            unicode: U+0C10<br>
+            changed pixels: 0.99%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ఖ<br>
+        <span class="tooltiptext">
+            name: TELUGU LETTER KHA<br>
+            unicode: U+0C16<br>
+            changed pixels: 0.95%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ళ<br>
+        <span class="tooltiptext">
+            name: TELUGU LETTER LLA<br>
+            unicode: U+0C33<br>
+            changed pixels: 0.92%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ష<br>
+        <span class="tooltiptext">
+            name: TELUGU LETTER SSA<br>
+            unicode: U+0C37<br>
+            changed pixels: 0.91%
+        </span>
+    </div>
+</div>
+            </div>
+          
+          </div>
+      </div>
+    
+
+    
+      <div class="box">
+        <div class="box-title">Misshapen Common words</div>
+        <div class="box-text old-Black" style="font-size: 32pt">
+          
+        </div>
+      </div>
+    
+      <div class="box">
+        <div class="box-title">Misshapen Telugu words</div>
+        <div class="box-text old-Black" style="font-size: 32pt">
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ఃకృతాత్మభిః<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=7, pos=(0, 0, 304, 0)<br>gid=23, pos=(0, 0, 536, 0)<br>gid=65, pos=(0, 0, 0, 0)<br>gid=38, pos=(0, 0, 772, 0)<br>gid=60, pos=(0, 0, 0, 0)<br>gid=38, pos=(0, 0, 772, 0)<br>gid=73, pos=(0, 0, 0, 0)<br>gid=47, pos=(0, 0, 1012, 0)<br>gid=46, pos=(0, 0, 741, 0)<br>gid=61, pos=(0, 0, 0, 0)<br>gid=7, pos=(0, 0, 304, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=7, pos=(0, 0, 304, 0)<br>gid=23, pos=(0, 0, 536, 0)<br>gid=65, pos=(0, 0, 0, 0)<br>gid=38, pos=(0, 0, 772, 0)<br>gid=60, pos=(0, 0, 0, 0)<br>gid=38, pos=(0, 0, 772, 0)<br>gid=73, pos=(0, 0, 0, 0)<br>gid=47, pos=(0, 0, 1012, 0)<br>gid=46, pos=(0, 0, 741, 0)<br>gid=61, pos=(0, 0, 0, 0)<br>gid=7, pos=(0, 0, 304, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.10%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        అఁయుఅ్‌రఫ్‌న<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=9, pos=(0, 0, 796, 0)<br>gid=5, pos=(0, 0, 313, 0)<br>gid=48, pos=(0, 0, 1215, 0)<br>gid=63, pos=(0, 0, 0, 0)<br>gid=9, pos=(0, 0, 796, 0)<br>gid=73, pos=(0, 0, 0, 0)<br>gid=3, pos=(0, 0, 0, 0)<br>gid=49, pos=(0, 0, 600, 0)<br>gid=44, pos=(0, 0, 688, 0)<br>gid=73, pos=(0, 0, 0, 0)<br>gid=3, pos=(0, 0, 0, 0)<br>gid=42, pos=(0, 0, 687, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=9, pos=(0, 0, 796, 0)<br>gid=5, pos=(0, 0, 313, 0)<br>gid=48, pos=(0, 0, 1215, 0)<br>gid=63, pos=(0, 0, 0, 0)<br>gid=9, pos=(0, 0, 796, 0)<br>gid=73, pos=(0, 0, 0, 0)<br>gid=3, pos=(0, 0, 0, 0)<br>gid=49, pos=(0, 0, 600, 0)<br>gid=44, pos=(0, 0, 688, 0)<br>gid=73, pos=(0, 0, 0, 0)<br>gid=3, pos=(0, 0, 0, 0)<br>gid=42, pos=(0, 0, 687, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.01%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ంఎఘరజ్<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=6, pos=(0, 0, 513, 0)<br>gid=17, pos=(0, 0, 695, 0)<br>gid=26, pos=(0, 0, 1012, 0)<br>gid=49, pos=(0, 0, 600, 0)<br>gid=30, pos=(0, 0, 735, 0)<br>gid=73, pos=(0, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=6, pos=(0, 0, 513, 0)<br>gid=17, pos=(0, 0, 695, 0)<br>gid=26, pos=(0, 0, 1012, 0)<br>gid=49, pos=(0, 0, 600, 0)<br>gid=30, pos=(0, 0, 735, 0)<br>gid=73, pos=(0, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.01%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        అంఅర్జాతీయ<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=9, pos=(0, 0, 796, 0)<br>gid=6, pos=(0, 0, 513, 0)<br>gid=9, pos=(0, 0, 796, 0)<br>gid=49, pos=(0, 0, 600, 0)<br>gid=73, pos=(0, 0, 0, 0)<br>gid=30, pos=(0, 0, 735, 0)<br>gid=60, pos=(0, 0, 0, 0)<br>gid=38, pos=(0, 0, 772, 0)<br>gid=62, pos=(0, 0, 0, 0)<br>gid=48, pos=(0, 0, 1215, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=9, pos=(0, 0, 796, 0)<br>gid=6, pos=(0, 0, 513, 0)<br>gid=9, pos=(0, 0, 796, 0)<br>gid=49, pos=(0, 0, 600, 0)<br>gid=73, pos=(0, 0, 0, 0)<br>gid=30, pos=(0, 0, 735, 0)<br>gid=60, pos=(0, 0, 0, 0)<br>gid=38, pos=(0, 0, 772, 0)<br>gid=62, pos=(0, 0, 0, 0)<br>gid=48, pos=(0, 0, 1215, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 0.97%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ంఆధ్యమ<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=6, pos=(0, 0, 513, 0)<br>gid=10, pos=(0, 0, 772, 0)<br>gid=41, pos=(0, 0, 697, 0)<br>gid=73, pos=(0, 0, 0, 0)<br>gid=48, pos=(0, 0, 1215, 0)<br>gid=47, pos=(0, 0, 1012, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=6, pos=(0, 0, 513, 0)<br>gid=10, pos=(0, 0, 772, 0)<br>gid=41, pos=(0, 0, 697, 0)<br>gid=73, pos=(0, 0, 0, 0)<br>gid=48, pos=(0, 0, 1215, 0)<br>gid=47, pos=(0, 0, 1012, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 0.92%
+        </div>
+        </span>
+    </div>
+</div>
+          
+        </div>
+      </div>
+    
+    
+    <div class="box">
+      <div class="box-title">Misshapen user strings</div>
+      <div class="box-text old-Black" style="font-size: 32pt">
+        
+      </div>
+    </div>
+    
+
+    
+
+    </div>
+  
+
+    </div>
+</body>
+	<script>
+
+	POSITION = "old"
+	fontToggle = document.getElementById("font-toggle")
+	function switchFonts() {
+	boxTitles = document.getElementsByClassName("box-title")
+	items = document.getElementsByClassName("box-text");
+	  
+	if (POSITION === "old") {
+	  POSITION = "new"
+	  for (item of boxTitles) {
+	    item.textContent = item.textContent.replace("old", "new")
+	    fontToggle.textContent = "new"
+	  }
+	  for (item of items) {
+		item.className = item.className.replace("old", "new")
+	  }
+
+	  } else {
+	  POSITION = "old"
+	  for (item of boxTitles) {
+	    item.textContent = item.textContent.replace("new", "old")
+	    fontToggle.textContent = "old"
+	  }
+	  for (item of items) {
+		item.className = item.className.replace("new", "old")
+	  }
+	}
+	}
+	if (fontToggle !== null) {
+		fontToggle.addEventListener("click", switchFonts);
+	}
+
+// apply optional ot feats
+
+function buildFeatureList() {
+	var features = [
+		'aalt', 'c2sc', 'calt', 'case', 'cpsp', 'dlig', 'dnom',
+		'fina', 'frac', 'init', 'kern', 'liga', 'lnum', 'numr', 'onum',
+		'ordn', 'pnum', 'salt', 'sinf', 'smcp', 'sups',
+		'swsh', 'titl', 'tnum', 'zero', 'ss01', 'ss02',
+		'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08',
+		'ss09', 'ss10', 'ss11', 'ss12', 'ss13', 'ss14',
+		'ss15', 'ss16', 'ss17', 'ss18', 'ss19', 'ss20'
+	]
+	
+	var otPanel = document.getElementById("ot-panel")
+	for (i=0; i<features.length; i++) {
+		var feat = features[i]
+		
+		var row = document.createElement("div");
+
+		var item = document.createElement("input");
+		item.type = "checkbox"
+		item.value = feat
+		item.classList.add("ot-checkbox")
+		var label = document.createElement("label")
+		label.textContent = feat
+
+		row.appendChild(item)
+		row.appendChild(label)
+
+		otPanel.appendChild(row)
+	}
+}
+
+buildFeatureList()
+
+
+function enableFeatures() {
+	var checkboxes = document.getElementsByClassName("ot-checkbox")
+	var res = []
+	var disableKerning = false
+	for (i=0; i<checkboxes.length; i++) {
+		if (checkboxes[i].checked === true) {
+			var checkbox = checkboxes[i]
+			res.push('"' + checkbox.value + '"')
+
+			if (checkbox.value === "kern") {
+				disableKerning = true
+			}
+		}
+	}	
+
+	var boxText = document.getElementsByClassName("box-text")
+	var otString = res.join(", ")
+	for (j=0; j<boxText.length; j++) {
+		boxText[j].style.fontFeatureSettings = otString
+		if (disableKerning === true) {
+			boxText[j].style.fontKerning = "none"
+		}
+	}
+}
+
+var otButton = document.getElementById("ot-button")
+otButton.addEventListener("click", function() {
+    otPanel = document.getElementById("ot-panel")
+    if (otPanel.style.display !== "block") {
+        otPanel.style.display = "block"
+    } else {
+        otPanel.style.display = "none"
+    }
+})
+var checkboxes = document.getElementsByClassName("ot-checkbox")
+for (i=0; i<checkboxes.length; i++) {
+	cb = checkboxes[i]
+	cb.addEventListener("click", enableFeatures)
+}	
+    
+	function render(node, toplevel) {
+		var wrapper = $("<div> </div>");
+		if (!node) { return wrapper }
+		if (Array.isArray(node)) {
+			var before = $("<span/>");
+			before.addClass("attr-before");
+			before.html(" " + node[0] + " ");
+			var after = $("<span/>");
+			after.addClass("attr-after");
+			after.append(node[1]);
+			wrapper.append(before);
+			wrapper.append(after);
+			return wrapper
+		}
+		for (const [key, value] of Object.entries(node)) {
+			var display = $("<div/>");
+			display.addClass("node")
+			if (!toplevel && ! key.match(/^\d+$/)) {
+				display.hide()
+			}
+			display.append(key);
+			display.append(render(value, false).children());
+			wrapper.append(display)
+		}
+		return wrapper
+
+	}
+	$(function() {
+		$("#difftable").append(render(fontdiff, true).children())
+		$("#difftable .node").on("click", function(event){ $(this).children().toggle(); event.stopPropagation() })
+	});
+
+function wordBreaks() {
+  words = document.getElementsByClassName("cell-word")
+  res = []
+  prevTop = 0
+  for (i=0; i<words.length; i++) {
+      var word = words[i]
+      currentTop = word.getBoundingClientRect().top
+      if (currentTop > prevTop) {
+          res.push(i)
+      }
+      prevTop = currentTop
+  }
+  return res
+}
+
+async function insertBreaks() {
+  switchFonts()
+  await sleep(1)
+  breaksBefore = wordBreaks()
+  switchFonts()
+  await sleep(1)
+  breaksAfter = wordBreaks()
+
+
+  console.log(breaksBefore.length, breaksAfter.length)
+
+  if (breaksBefore.length >= breaksAfter.length) {
+    breaks = breaksBefore
+  } else {
+    breaks = breaksAfter
+  }
+
+  words = document.getElementsByClassName("cell-word")
+  breaks.forEach(function(i) {
+    if (i != 0) {
+      i = i
+    }
+    word = words[i]
+    spacer = document.createElement("div")
+    spacer.className = "spacer"
+    word.parentNode.insertBefore(spacer, word)
+  })
+}
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+  
+insertBreaks()
+
+
+    </script>
+</html>
