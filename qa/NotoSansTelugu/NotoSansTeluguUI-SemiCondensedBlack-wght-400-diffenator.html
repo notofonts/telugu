@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+<head>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>GFR - Glyphs</title>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <style type="text/css">
+    
+
+        html{
+	  font-family: sans-serif;
+	}
+    @font-face {
+        font-family: "Adobe NotDef";
+        src: url(https://cdn.jsdelivr.net/gh/adobe-fonts/adobe-notdef/AND-Regular.ttf);
+    }
+	.box-title{
+	  width: 100%;
+	  font-size: 8pt;
+	  font-weight: 700;
+	  border-top: 1px solid black;
+	  padding-top: 5px;
+	  margin-bottom: 10pt;
+	  display: block;
+	}
+	.box{
+	  margin-bottom: 20pt;
+	  width: 100%;
+	  float: left;
+	}
+	.box-text{
+	}
+	
+	#nav{
+	  position: fixed;
+	  right: 20px;
+	  z-index: 100;
+	}
+	#font-toggle{
+	}
+	.nav-item{
+		display: block;
+		cursor: pointer;
+		-webkit-user-select: none; /* Safari */        
+		-moz-user-select: none; /* Firefox */
+			-ms-user-select: none; /* IE10+/Edge */
+		user-select: none; /* Standard */
+		text-align: center;
+		color: white;
+		background-color: black;
+		display: block;
+		font-size: 9pt;
+		padding: 5px;
+		margin: 2px;
+	}
+	.tooltip {
+	position: relative;
+	display: inline-block;
+	border-bottom: 1px dotted black;
+	}
+
+	.tooltip .tooltiptext {
+	font-family: sans-serif;
+	visibility: hidden;
+	width: 500px;
+	background-color: black;
+	color: #fff;
+	text-align: left;
+	font-size: 12pt;
+	line-height: 15pt;
+	border-radius: 6px;
+	padding: 5px 0;
+
+	/* Position the tooltip */
+	position: absolute;
+	z-index: 1;
+	}
+
+	.tooltip:hover .tooltiptext {
+	padding: 10px;
+	visibility: visible;
+	}
+	.tooltipleft {
+		float:left;
+		width: 249px;
+	}
+	.tooltipright {
+		float:right;
+		width:250px;
+	}
+
+			/* Stuff needed for the table differ */
+            body {
+                font-family: Helvetica;
+            }
+            .node {
+                font-family: courier;
+                cursor: pointer;
+                position: relative;
+                left: 30px;
+                padding: 5px;
+                display: block;
+                border: 1px dashed grey;
+            }
+            .header {
+            font-weight: bold;
+            }
+            .attr-before{
+                color: red;
+                cursor: text;
+            }
+            .attr-after{
+                color: green;
+                cursor: text;
+            }
+            .leaf {
+            font-weight: bold;
+            }
+            .old .cell .new {
+            	display:  none;
+            }
+            .new .cell .old {
+            	display:  none;
+            }
+            .both .cell .old {
+            	opacity: 0.75;
+            	color:  red;
+            }
+            .both .cell .new {
+            	opacity: 0.75;
+            	position: absolute;
+            	top: 0;
+            	color:  green;
+            }
+			.spacer {
+				display:block;
+				float:left;
+				width:100%;
+			}
+
+	  
+	    @font-face{
+    src: url(old-NotoSansTeluguUI-SemiCondensedBlack.ttf);
+    font-family: "old font";
+    font-weight: 900;
+    
+    font-style: normal;
+}
+	  
+
+	  
+	    @font-face{
+    src: url(new-NotoSansTeluguUI-SemiCondensedBlack.ttf);
+    font-family: "new font";
+    font-weight: 900;
+    
+    font-style: normal;
+}
+	  
+
+	  
+
+	  
+	    .old-wght-400{
+    font-family: "old font", "Adobe NotDef";
+    font-weight: 400;
+    
+    font-style: normal;
+    font-variation-settings: "wght" 400;
+}
+	  
+
+	  
+	    .new-wght-400{
+    font-family: "new font", "Adobe NotDef";
+    font-weight: 400;
+    
+    font-style: normal;
+    font-variation-settings: "wght" 400;
+}
+	  
+
+	  
+	
+.cell{
+  z-index: -100;
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 5pt;
+  margin: 5pt;
+  width: 50pt;
+  line-height: 48.0px;
+}
+.cell-word{
+  z-index: -100;
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 5pt;
+  margin: 5pt;
+  line-height: 48.0px;
+}
+.cat-strings .cell {
+  clear: both;
+  position: static;
+  float: none;
+  text-align: left;
+}
+.box-title {
+  clear: both;
+}
+
+
+	   #ot-panel {
+		max-height: 400px;
+		overflow-y: scroll;
+		background: white;
+		padding: 10px;
+		display: none;
+	   }
+    </style>
+</head>
+<body>
+    <div id="nav">
+		
+			<div class="nav-item" id="font-toggle">old</div>
+		
+			<div class="nav-item" id="ot-button">OT features</div>
+			<div id="ot-panel">
+			</div>
+		
+	</div>
+    <div id="content">
+	<h2>
+<b>Diffenator</b>
+</h2>
+	
+  
+    <div class="box">
+    <div class="box-title">Tables</div>
+      <div data-path="root" data-open="0" id="difftable"></div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+
+    
+      <div class="box">
+        <div class="box-title">Misshapen Common words</div>
+        <div class="box-text old-wght-400" style="font-size: 32pt">
+          
+        </div>
+      </div>
+    
+      <div class="box">
+        <div class="box-title">Misshapen Telugu words</div>
+        <div class="box-text old-wght-400" style="font-size: 32pt">
+          
+        </div>
+      </div>
+    
+    
+    <div class="box">
+      <div class="box-title">Misshapen user strings</div>
+      <div class="box-text old-wght-400" style="font-size: 32pt">
+        
+      </div>
+    </div>
+    
+
+    
+
+    </div>
+  
+<script>var fontdiff = {"hmtx": {"metrics": {"goovoweltelu": {"0": [853, 852]}, "bapostscripttelu.spacing": {"1": [15, 14]}, "bhapostscripttelu.spacing": {"1": [15, 14]}, "govoweltelu": {"0": [853, 852]}}}, "hhea": {"caretSlopeRise": [1, 1000]}, "head": {"checkSumAdjustment": [2657829228, 1024201848], "modified": [3778739699, 3791458614]}, "glyf": {"glyphs": {"ghailengthmarkUItelu": {"Contour: 0": {"Node: 1": {"x": [-456, -455]}}}, "tsivoweltelu": {"Contour: 0": {"Node: 6": {"x": [249, 248]}}}, "shahalanttelu": {"Contour: 0": {"Node: 23": {"x": [267, 266]}}}, "tthiivoweltelu": {"Contour: 1": {"Node: 51": {"x": [239, 240]}, "Node: 50": {"x": [239, 240]}}}, "novoweltelu": {"Contour: 0": {"Node: 5": {"x": [256, 255]}}}, "otelu": {"Contour: 0": {"Node: 58": {"y": [426, 425]}}}, "auvowelsigntelu.spacing": {"Contour: 0": {"Node: 11": {"y": [396, 395]}}}, "naalttelu.spacing": {"Contour: 0": {"Node: 5": {"x": [256, 255]}}}, "chaalttelu.spacing": {"Contour: 0": {"Node: 6": {"x": [249, 248]}}}, "pauvoweltelu": {"Contour: 1": {"Node: 71": {"y": [396, 395]}}}, "tsauvoweltelu": {"Contour: 2": {"Node: 34": {"x": [249, 248]}}}, "tsoovoweltelu": {"Contour: 0": {"Node: 6": {"x": [249, 248]}}}, "naavoweltelu": {"Contour: 0": {"Node: 5": {"x": [256, 255]}}}, "four.telu": {"Contour: 1": {"Node: 17": {"y": [509, 508]}}}, "chahalanttelu": {"Contour: 0": {"Node: 6": {"x": [249, 248]}}}, "covoweltelu": {"Contour: 0": {"Node: 6": {"x": [249, 248]}}}, "nivoweltelu": {"Contour: 0": {"Node: 5": {"x": [256, 255]}}}, "chivoweltelu": {"Contour: 0": {"Node: 6": {"x": [249, 248]}}}, "riivoweltelu": {"Contour: 1": {"Node: 51": {"x": [239, 240]}, "Node: 50": {"x": [239, 240]}}}, "atelu": {"Contour: 0": {"Node: 9": {"x": [249, 248]}}}, "jhiivoweltelu": {"Contour: 1": {"Node: 93": {"x": [239, 240]}, "Node: 94": {"x": [239, 240]}}}, "bapostscripttelu.spacing": {"Component 0: bapostscripttelu": {"x": [200, 199]}}, "jivoweltelu": {"Contour: 0": {"Node: 32": {"x": [227, 226]}}}, "dziivoweltelu": {"Contour: 0": {"Node: 19": {"x": [223, 222]}}}, "bhapostscripttelu.spacing": {"Component 0: bhapostscripttelu": {"x": [200, 199]}}, "tsiivoweltelu": {"Contour: 0": {"Node: 6": {"x": [249, 248]}, "Node: 38": {"x": [259, 260]}, "Node: 37": {"x": [259, 260]}}}, "chauvoweltelu": {"Contour: 0": {"Node: 6": {"x": [249, 248]}}}, "papostscripttelu": {"Contour: 0": {"Node: 14": {"x": [-10, -11]}}}, "dzahalanttelu": {"Contour: 0": {"Node: 31": {"x": [226, 227]}}}, "two.telu": {"Contour: 0": {"Node: 22": {"y": [531, 530]}}}, "dzuvoweltelu": {"Contour: 2": {"Node: 62": {"x": [226, 227]}}}, "juvoweltelu": {"Contour: 0": {"Node: 32": {"x": [226, 227]}}}, "tteevoweltelu": {"Contour: 0": {"Node: 42": {"x": [755, 754]}}}, "chatelu": {"Contour: 0": {"Node: 34": {"x": [249, 248]}}}, "tsaavoweltelu": {"Contour: 2": {"Node: 36": {"x": [249, 248]}}}, "diivoweltelu": {"Contour: 0": {"Node: 20": {"x": [245, 244]}, "Node: 19": {"x": [245, 244]}, "Node: 18": {"x": [245, 244]}}}, "nahalanttelu": {"Contour: 0": {"Node: 5": {"x": [256, 255]}}}, "cauvoweltelu": {"Contour: 0": {"Node: 6": {"x": [249, 248]}}}, "tsahalanttelu": {"Contour: 0": {"Node: 6": {"x": [249, 248]}}}, "dzatelu": {"Contour: 2": {"Node: 62": {"x": [226, 227]}}}, "civoweltelu": {"Contour: 0": {"Node: 6": {"x": [249, 248]}}}, "saavoweltelu": {"Contour: 0": {"Node: 5": {"x": [256, 255]}}}, "jahalanttelu": {"Contour: 0": {"Node: 32": {"x": [227, 226]}}}, "yaalttelu": {"Contour: 0": {"Node: 21": {"x": [789, 788]}}}, "dzaavoweltelu": {"Contour: 2": {"Node: 62": {"x": [226, 227]}}}, "tsatelu": {"Contour: 2": {"Node: 35": {"x": [249, 248]}, "Node: 58": {"x": [621, 620]}, "Node: 57": {"x": [621, 620]}}}, "jhivoweltelu": {"Contour: 1": {"Node: 78": {"x": [239, 240]}, "Node: 77": {"x": [239, 240]}}}, "natelu": {"Contour: 0": {"Node: 32": {"x": [256, 255]}}}, "autelu": {"Contour: 0": {"Node: 92": {"y": [426, 425]}}}, "sauvoweltelu": {"Contour: 1": {"Node: 79": {"y": [395, 396]}}}, "lllauvoweltelu": {"Contour: 0": {"Node: 76": {"x": [853, 852]}}}, "chovoweltelu": {"Contour: 0": {"Node: 6": {"x": [249, 248]}}}, "jovoweltelu": {"Contour: 0": {"Node: 32": {"x": [227, 226]}}}, "ellipsis.telu": {"Contour: 2": {"Node: 29": {"x": [808, 807]}, "Node: 31": {"x": [808, 807]}, "Node: 30": {"x": [808, 807]}}}, "thiivoweltelu": {"Contour: 0": {"Node: 20": {"x": [245, 244]}, "Node: 19": {"x": [245, 244]}, "Node: 18": {"x": [245, 244]}}}, "jatelu": {"Contour: 0": {"Node: 32": {"x": [226, 227]}}}, "tseevoweltelu": {"Contour: 0": {"Node: 6": {"x": [249, 248]}}}, "quotedbl.telu": {"Contour: 0": {"Node: 2": {"x": [241, 240]}}}, "lllaivowelUItelu": {"Contour: 3": {"Node: 116": {"x": [122, 121]}, "Node: 117": {"x": [122, 121]}, "Node: 115": {"x": [122, 121]}}}, "vauvoweltelu": {"Contour: 0": {"Node: 55": {"x": [669, 668]}, "Node: 56": {"x": [669, 668]}}}, "catelu": {"Contour: 0": {"Node: 34": {"x": [249, 248]}}}, "dzuuvoweltelu": {"Contour: 2": {"Node: 62": {"x": [226, 227]}}}, "five.telu": {"Contour: 0": {"Node: 3": {"y": [380, 379]}}}, "dhiivoweltelu": {"Contour: 0": {"Node: 23": {"x": [412, 411]}}}, "quotesingle.telu": {"Contour: 0": {"Node: 2": {"x": [241, 240]}}}, "caalttelu.spacing": {"Contour: 0": {"Node: 6": {"x": [249, 248]}}}, "nauvoweltelu": {"Contour: 0": {"Node: 5": {"x": [256, 255]}}}, "ssauvoweltelu": {"Contour: 1": {"Node: 88": {"y": [396, 395]}}}, "phauvoweltelu": {"Contour: 1": {"Node: 71": {"y": [396, 395]}}}, "hasubscriptUItelu": {"Contour: 0": {"Node: 13": {"x": [-404, -403]}}}, "cahalanttelu": {"Contour: 0": {"Node: 6": {"x": [249, 248]}}}, "saalttelu": {"Contour: 0": {"Node: 5": {"x": [256, 255]}}}, "phapostscripttelu": {"Contour: 0": {"Node: 14": {"x": [-10, -11]}}}, "ssailengthmarkUItelu": {"Contour: 0": {"Node: 3": {"x": [-307, -308]}}}, "rivoweltelu": {"Contour: 1": {"Node: 35": {"x": [239, 240]}, "Node: 34": {"x": [239, 240]}}}, "aatelu": {"Contour: 0": {"Node: 9": {"x": [249, 248]}}}, "tsovoweltelu": {"Contour: 0": {"Node: 6": {"x": [249, 248]}}}, "caavoweltelu": {"Contour: 0": {"Node: 6": {"x": [249, 248]}}}, "chaavoweltelu": {"Contour: 0": {"Node: 6": {"x": [249, 248]}}}, "tsevoweltelu": {"Contour: 2": {"Node: 34": {"x": [249, 248]}}}, "tovoweltelu": {"Contour: 0": {"Node: 70": {"x": [504, 505]}, "Node: 69": {"x": [504, 505]}, "Node: 71": {"x": [504, 505]}}}, "ssailengthmarktelu": {"Contour: 0": {"Node: 45": {"x": [50, 49]}}}, "jaavoweltelu": {"Contour: 0": {"Node: 32": {"x": [226, 227]}}}, "juuvoweltelu": {"Contour: 0": {"Node: 32": {"x": [226, 227]}}}, "tthivoweltelu": {"Contour: 1": {"Node: 35": {"x": [239, 240]}, "Node: 34": {"x": [239, 240]}}}}}};</script>
+
+    </div>
+</body>
+	<script>
+
+	POSITION = "old"
+	fontToggle = document.getElementById("font-toggle")
+	function switchFonts() {
+	boxTitles = document.getElementsByClassName("box-title")
+	items = document.getElementsByClassName("box-text");
+	  
+	if (POSITION === "old") {
+	  POSITION = "new"
+	  for (item of boxTitles) {
+	    item.textContent = item.textContent.replace("old", "new")
+	    fontToggle.textContent = "new"
+	  }
+	  for (item of items) {
+		item.className = item.className.replace("old", "new")
+	  }
+
+	  } else {
+	  POSITION = "old"
+	  for (item of boxTitles) {
+	    item.textContent = item.textContent.replace("new", "old")
+	    fontToggle.textContent = "old"
+	  }
+	  for (item of items) {
+		item.className = item.className.replace("new", "old")
+	  }
+	}
+	}
+	if (fontToggle !== null) {
+		fontToggle.addEventListener("click", switchFonts);
+	}
+
+// apply optional ot feats
+
+function buildFeatureList() {
+	var features = [
+		'aalt', 'c2sc', 'calt', 'case', 'cpsp', 'dlig', 'dnom',
+		'fina', 'frac', 'init', 'kern', 'liga', 'lnum', 'numr', 'onum',
+		'ordn', 'pnum', 'salt', 'sinf', 'smcp', 'sups',
+		'swsh', 'titl', 'tnum', 'zero', 'ss01', 'ss02',
+		'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08',
+		'ss09', 'ss10', 'ss11', 'ss12', 'ss13', 'ss14',
+		'ss15', 'ss16', 'ss17', 'ss18', 'ss19', 'ss20'
+	]
+	
+	var otPanel = document.getElementById("ot-panel")
+	for (i=0; i<features.length; i++) {
+		var feat = features[i]
+		
+		var row = document.createElement("div");
+
+		var item = document.createElement("input");
+		item.type = "checkbox"
+		item.value = feat
+		item.classList.add("ot-checkbox")
+		var label = document.createElement("label")
+		label.textContent = feat
+
+		row.appendChild(item)
+		row.appendChild(label)
+
+		otPanel.appendChild(row)
+	}
+}
+
+buildFeatureList()
+
+
+function enableFeatures() {
+	var checkboxes = document.getElementsByClassName("ot-checkbox")
+	var res = []
+	var disableKerning = false
+	for (i=0; i<checkboxes.length; i++) {
+		if (checkboxes[i].checked === true) {
+			var checkbox = checkboxes[i]
+			res.push('"' + checkbox.value + '"')
+
+			if (checkbox.value === "kern") {
+				disableKerning = true
+			}
+		}
+	}	
+
+	var boxText = document.getElementsByClassName("box-text")
+	var otString = res.join(", ")
+	for (j=0; j<boxText.length; j++) {
+		boxText[j].style.fontFeatureSettings = otString
+		if (disableKerning === true) {
+			boxText[j].style.fontKerning = "none"
+		}
+	}
+}
+
+var otButton = document.getElementById("ot-button")
+otButton.addEventListener("click", function() {
+    otPanel = document.getElementById("ot-panel")
+    if (otPanel.style.display !== "block") {
+        otPanel.style.display = "block"
+    } else {
+        otPanel.style.display = "none"
+    }
+})
+var checkboxes = document.getElementsByClassName("ot-checkbox")
+for (i=0; i<checkboxes.length; i++) {
+	cb = checkboxes[i]
+	cb.addEventListener("click", enableFeatures)
+}	
+    
+  class Table {
+      constructor(data) {
+          this.data = {"root": data}
+          this.open("root")
+      }
+
+      createNode(key, label) {
+          let childElem = document.createElement("div")
+          let childKey = key
+          childElem.dataset.path = childKey
+          childElem.dataset.open = "0"
+          childElem.innerHTML = label
+          childElem.classList.add("node")
+          return childElem
+      }
+
+      close(key) {
+          let htmlParent = document.querySelector(`[data-path="${key}"]`)
+          let label = htmlParent.childNodes[0].nodeValue
+          htmlParent.replaceChildren()
+          htmlParent.textContent = label
+          htmlParent.dataset.open = "0"
+      }
+
+      open(key) {
+          let htmlParent = document.querySelector(`[data-path="${key}"]`)
+          htmlParent.dataset.open = "1"
+
+          // traverse to correct data level based on data-path
+          let path = key.split(".")
+          let data = this.data
+          for (var i=0; i<path.length; i++) {
+              data = data[path[i]];
+
+          }
+
+          // arrays containing two values are used as leaf nodes.
+          // The first item is the before value and the second
+          // is for after value.
+          if (Array.isArray(data)) {
+              let childElem = this.createNode("", "")
+              let before = document.createElement("span")
+              before.classList.add("attr-before")
+              before.textContent = String(data[0]) + " "
+              let after = document.createElement("span")
+              after.classList.add("attr-after")
+              after.textContent = String(data[1])
+              childElem.appendChild(before)
+              childElem.appendChild(after)
+              htmlParent.appendChild(childElem)
+              return
+          }
+          // Create next child nodes
+          for (var i in data) {
+              let childKey = key + "." + i
+              let childElem = this.createNode(childKey, i)
+              htmlParent.appendChild(childElem);
+              var that = this
+
+              // Toggle whether to open or close a node
+              childElem.addEventListener("click", function() {
+                  if (this.dataset.open === "0") {
+                      that.open(childKey)
+                      event.stopPropagation()
+                  } else {
+                      that.close(childKey)
+                      event.stopPropagation()
+                  }
+              })
+          }
+      }
+  }
+
+  let t = new Table(fontdiff, document.getElementById("difftable"))
+
+
+function wordBreaks() {
+  words = document.getElementsByClassName("cell-word")
+  res = []
+  prevTop = 0
+  for (i=0; i<words.length; i++) {
+      var word = words[i]
+      currentTop = word.getBoundingClientRect().top
+      if (currentTop > prevTop) {
+          res.push(i)
+      }
+      prevTop = currentTop
+  }
+  return res
+}
+
+async function insertBreaks() {
+  switchFonts()
+  await sleep(1)
+  breaksBefore = wordBreaks()
+  switchFonts()
+  await sleep(1)
+  breaksAfter = wordBreaks()
+
+
+  console.log(breaksBefore.length, breaksAfter.length)
+
+  if (breaksBefore.length >= breaksAfter.length) {
+    breaks = breaksBefore
+  } else {
+    breaks = breaksAfter
+  }
+
+  words = document.getElementsByClassName("cell-word")
+  breaks.forEach(function(i) {
+    if (i != 0) {
+      i = i
+    }
+    word = words[i]
+    spacer = document.createElement("div")
+    spacer.className = "spacer"
+    word.parentNode.insertBefore(spacer, word)
+  })
+}
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+  
+insertBreaks()
+
+
+    </script>
+</html>
